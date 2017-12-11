@@ -11,22 +11,38 @@
     </div>
    <br>
 <div>
+
+    Rows to display : <input type="number" step="1" ng-model="rowCount" max="5" min="0" />
+        <br /><br />
+
+       Sort By :
+        <select ng-model="sortColumn">
+			 <option value="">---Please select---</option>
+            <option  value="name"   >Name ASC</option>
+            <option  value="+dateOfBirth">Date of Birth ASC</option>
+            <option value="+gender">Gender ASC</option>
+            <option value="-salary">Salary DESC</option>
+        </select>
+
+
 <table>
     <thead>
         <tr>
-            <th>Firstname</th>
-            <th>Lastname</th>
-            <th>Gender</th>
-            <th>Salary</th>
+                    <th>Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Salary (number filter)</th>
+                    <th>Salary (currency filter)</th>
         </tr>
     </thead>
 	<tbody>
-	 <tr ng-repeat="employee in emp">
-                    <td> {{ employee.firstName }} </td>
-                    <td> {{ employee.lastName }} </td>
+     <tr ng-repeat="employee in emp | limitTo:rowCount | orderBy:sortColumn">
+                    <td> {{ employee.name | uppercase }} </td>
+                    <td> {{ employee.dateOfBirth | date:"dd/MM/yyyy" }} </td>
                     <td> {{ employee.gender }} </td>
-                    <td> {{ employee.salary }} </td>
-          </tr>
+                    <td> {{ employee.salary | number:2 }} </td>
+                    <td> {{ employee.salary | currency : "£" : 1 }} </td>
+        </tr>
      </tbody>
   </table>
 </div>

@@ -48,14 +48,34 @@ var myApp = angular
     .module("myModule", [])
     .controller("myController",($scope) => {
     	$scope.message = "AngularJS test app";
-    	var emp = [
-                    { firstName: "anc", lastName: "DD", gender: "Male", salary: 20000 },
-                    { firstName: "sdgf", lastName: "qq", gender: "Female", salary: 68000 },
-                    { firstName: "fv", lastName: "aa", gender: "Male", salary: 57000 },
-                    { firstName: "ggg", lastName: "bb", gender: "Female", salary: 53000 },
-                    { firstName: "FFF", lastName: "cc", gender: "Male", salary: 60000 }
-                ];
+
+            var emp = [
+                {
+                    name: "aa", dateOfBirth: new Date("November 23, 2012"),
+                    gender: "Male", salary: 55000.788
+                },
+                {
+                    name: "bb", dateOfBirth: new Date("May 05, 2012"),
+                    gender: "Female", salary: 68000
+                },
+                {
+                    name: "cc", dateOfBirth: new Date("August 15, 2012"),
+                    gender: "Male", salary: 57000
+                },
+                {
+                    name: "dd", dateOfBirth: new Date("October 27, 2012"),
+                    gender: "Female", salary: 53000
+                },
+                {
+                    name: "ddff", dateOfBirth: new Date("December 30, 2012"),
+                    gender: "Male", salary: 60000
+                }
+            ];
+
+
+
         $scope.emp = emp;
+        $scope.rowCount = 2;
 
          var countries = [
                     {
