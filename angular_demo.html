@@ -4,7 +4,8 @@
     <script src="node_modules/angular/angular.min.js"></script>
     <script src="demo.js"></script>
 </head>
-<body ng-controller= "myController">
+<body>
+<div ng-controller= "myController">
     <div>
     	{{ message}}
     </div>
@@ -13,6 +14,22 @@
 	<div>First name: {{emp.firstName}}</div>
 	<div>Last name: {{emp.lastName}}</div>
 </div>
+</div>
+
+
+  <div ng-controller="countryController">
+        <div>
+            Country : {{ country.name }}
+        </div>
+        <div>
+            Capital : {{ country.capital }}
+        </div>
+        <div>
+            <img  ng-src="{{country.flag}}"
+                 alt="{{ country.name + ' Flag' }}"
+                 style="height:100px; width:200px" />
+        </div>
+    </div>
 
 </body>
 </html>

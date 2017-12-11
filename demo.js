@@ -54,6 +54,14 @@ var myApp = angular
             gender: 'Male'
         };
         $scope.emp = emp;
+    })
+    .controller("countryController", ($scope) => {
+    	  var country = {
+                        name: "INDIA",
+                        capital: "dDelhi",
+                        flag: "/home/user/test_projet/angular1_demo/img/flag.png"
+                    };
+                    $scope.country = country;
     });
 
 
