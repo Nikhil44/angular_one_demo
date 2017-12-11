@@ -28,7 +28,7 @@ myApp.controller("myController",($scope) => {
 	// Register the controller with the module
 	myApp.controller("myController", myController);
 
- */
+	*/
 
 
 //# threed way
@@ -40,71 +40,90 @@ myApp.controller("mycontroller", function ($scope) {
 	    $scope.message = "AngularJS test app";
 })
 
- */
+*/
 
 // fourth way method chaining mechanism
 
 var myApp = angular
-    .module("myModule", [])
-    .controller("myController",($scope) => {
-    	$scope.message = "AngularJS test app";
+.module("myModule", [])
+.controller("myController",($scope) => {
+	$scope.message = "AngularJS test app";
 
-            var emp = [
-                {
-                    name: "aa", dateOfBirth: new Date("November 23, 2012"),
-                    gender: "Male", salary: 55000.788
-                },
-                {
-                    name: "bb", dateOfBirth: new Date("May 05, 2012"),
-                    gender: "Female", salary: 68000
-                },
-                {
-                    name: "cc", dateOfBirth: new Date("August 15, 2012"),
-                    gender: "Male", salary: 57000
-                },
-                {
-                    name: "dd", dateOfBirth: new Date("October 27, 2012"),
-                    gender: "Female", salary: 53000
-                },
-                {
-                    name: "ddff", dateOfBirth: new Date("December 30, 2012"),
-                    gender: "Male", salary: 60000
-                }
-            ];
+	var emp = [
+	{
+		name: "aa", dateOfBirth: new Date("November 23, 2012"),
+		gender: "Male", salary: 55000.788
+	},
+	{
+		name: "bb", dateOfBirth: new Date("May 05, 2012"),
+		gender: "Female", salary: 68000
+	},
+	{
+		name: "cc", dateOfBirth: new Date("August 15, 2012"),
+		gender: "Male", salary: 57000
+	},
+	{
+		name: "dd", dateOfBirth: new Date("October 27, 2012"),
+		gender: "Female", salary: 53000
+	},
+	{
+		name: "ddff", dateOfBirth: new Date("December 30, 2012"),
+		gender: "Male", salary: 60000
+	}
+	];
 
 
 
-        $scope.emp = emp;
-        $scope.rowCount = 2;
+	$scope.emp = emp;
+	$scope.rowCount = 2;
 
-         var countries = [
-                    {
-                        name: "UK",
-                        cities: [
-                            { name: "London" },
-                            { name: "Birmingham" },
-                            { name: "Manchester" }
-                        ]
-                    },
-                    {
-                        name: "USA",
-                        cities: [
-                            { name: "Los Angeles" },
-                            { name: "Chicago" },
-                            { name: "Houston" }
-                        ]
-                    },
-                    {
-                        name: "India",
-                        cities: [
-                            { name: "Hyderabad" },
-                            { name: "Chennai" },
-                            { name: "Mumbai" }
-                        ]
-                    }
-                ];
+	var countries = [
+	{
+		name: "UK",
+		cities: [
+		{ name: "London" },
+		{ name: "Birmingham" },
+		{ name: "Manchester" }
+		]
+	},
+	{
+		name: "USA",
+		cities: [
+		{ name: "Los Angeles" },
+		{ name: "Chicago" },
+		{ name: "Houston" }
+		]
+	},
+	{
+		name: "India",
+		cities: [
+		{ name: "Hyderabad" },
+		{ name: "Chennai" },
+		{ name: "Mumbai" }
+		]
+	}
+	];
 
-                $scope.countries = countries;
-    });
+	$scope.countries = countries;
+
+
+
+	var technologies = [
+	{ name: "Ruby", likes: 0, dislikes: 0 },
+	{ name: "Node js", likes: 0, dislikes: 0 },
+	{ name: "PHP", likes: 0, dislikes: 0 },
+	{ name: "AngularJS", likes: 0, dislikes: 0 }
+	];
+
+	$scope.technologies = technologies;
+
+	$scope.incrementLikes = function (technology) {
+		technology.likes++;
+	};
+
+	$scope.incrementDislikes = function (technology) {
+		technology.dislikes++;
+	};
+});
 
 
