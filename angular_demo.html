@@ -13,23 +13,42 @@
 <div>
 	<div>First name: {{emp.firstName}}</div>
 	<div>Last name: {{emp.lastName}}</div>
+	<div>Gender: {{emp.lastName}}</div>
 </div>
+
+<br><br>
+<div>
+  <table>
+            <tr>
+                <td>
+                    First Name
+                </td>
+                <td>
+                    <input type="text" placeholder="Firstname"
+                           ng-model="emp.firstName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name
+                </td>
+                <td>
+                    <input type="text" placeholder="Lastname"
+                           ng-model="emp.lastName" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Gender
+                </td>
+                <td>
+                    <input type="text" placeholder="Gender"
+                           ng-model="emp.gender" />
+                </td>
+            </tr>
+        </table>
 </div>
 
-
-  <div ng-controller="countryController">
-        <div>
-            Country : {{ country.name }}
-        </div>
-        <div>
-            Capital : {{ country.capital }}
-        </div>
-        <div>
-            <img  ng-src="{{country.flag}}"
-                 alt="{{ country.name + ' Flag' }}"
-                 style="height:100px; width:200px" />
-        </div>
-    </div>
-
+</div>
 </body>
 </html>
