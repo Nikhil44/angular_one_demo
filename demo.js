@@ -1,45 +1,24 @@
 var app = angular
         .module("myModule", [])
+        .filter("gender", function () {
+            return function (gender) {
+                switch (gender) {
+                    case 1:
+                        return "Male";
+                    case 2:
+                        return "Female";
+                    case 3:
+                        return "Not disclosed";
+                }
+            }
+        })
         .controller("myController", function ($scope) {
-
             var employees = [
-                {
-                    name: "ABC", dateOfBirth: new Date("November 23, "),
-                    gender: "Male", salary: 20050 , city: "Dhule"
-                },
-                {
-                    name: "CCC", dateOfBirth: new Date("May 05, "),
-                    gender: "Female", salary: 20050 , city: "Aurganbad"
-                },
-                {
-                    name: "BBB", dateOfBirth: new Date("August 15, "),
-                    gender: "Male", salary: 20050, city: "Mumbai"
-                },
-                {
-                    name: "DDD", dateOfBirth: new Date("October 27, "),
-                    gender: "Female", salary: 53000, city: "Beed"
-                },
-                {
-                    name: "FFF", dateOfBirth: new Date("December 30, "),
-                    gender: "Male", salary: 20050, city: "Pune"
-                }
+                { name: "Abcd", gender: 1, salary: 55000 },
+                { name: "Pqrs", gender: 2, salary: 68000 },
+                { name: "Xyze", gender: 1, salary: 57000 },
+                { name: "tttt", gender: 2, salary: 53000 },
+                { name: "Abcd", gender: 3, salary: 60000 }
             ];
-
             $scope.employees = employees;
-
-            $scope.search = function (item) {
-                if ($scope.searchText == undefined) {
-                    return true;
-                }
-                else {
-                    if (item.city.toLowerCase()
-                                 .indexOf($scope.searchText.toLowerCase()) != -1 ||
-                        item.name.toLowerCase()
-                                 .indexOf($scope.searchText.toLowerCase()) != -1) {
-                        return true;
-                    }
-                }
-
-                return false;
-            };
         });
