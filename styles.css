@@ -1,7 +1,10 @@
 
+body {
+    font-family: Arial;
+}
+
 table {
     border-collapse: collapse;
-    font-family:Arial;
 }
 
 td {
