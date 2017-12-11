@@ -4,43 +4,42 @@ var app = angular
 
             var employees = [
                 {
-                    name: "ABC", dateOfBirth: new Date("November 23, 1992"),
-                    gender: "Male", salary: 20050
+                    name: "ABC", dateOfBirth: new Date("November 23, "),
+                    gender: "Male", salary: 20050 , city: "Dhule"
                 },
                 {
-                    name: "CCC", dateOfBirth: new Date("May 05, 1992"),
-                    gender: "Female", salary: 20050
+                    name: "CCC", dateOfBirth: new Date("May 05, "),
+                    gender: "Female", salary: 20050 , city: "Aurganbad"
                 },
                 {
-                    name: "BBB", dateOfBirth: new Date("August 15, 1992"),
-                    gender: "Male", salary: 20050
+                    name: "BBB", dateOfBirth: new Date("August 15, "),
+                    gender: "Male", salary: 20050, city: "Mumbai"
                 },
                 {
-                    name: "DDD", dateOfBirth: new Date("October 27, 1992"),
-                    gender: "Female", salary: 53000
+                    name: "DDD", dateOfBirth: new Date("October 27, "),
+                    gender: "Female", salary: 53000, city: "Beed"
                 },
                 {
-                    name: "FFF", dateOfBirth: new Date("December 30, 1992"),
-                    gender: "Male", salary: 20050
+                    name: "FFF", dateOfBirth: new Date("December 30, "),
+                    gender: "Male", salary: 20050, city: "Pune"
                 }
             ];
 
             $scope.employees = employees;
-            $scope.sortColumn = "name";
-            $scope.reverseSort = false;
 
-            $scope.sortData = function (column) {
-                $scope.reverseSort = ($scope.sortColumn == column) ?
-                    !$scope.reverseSort : false;
-                $scope.sortColumn = column;
-            }
-
-            $scope.getSortClass = function (column) {
-
-                if ($scope.sortColumn == column) {
-                    return $scope.reverseSort ? 'arrow-down' : 'arrow-up';
+            $scope.search = function (item) {
+                if ($scope.searchText == undefined) {
+                    return true;
                 }
-20050
-                return '';
-            }
+                else {
+                    if (item.city.toLowerCase()
+                                 .indexOf($scope.searchText.toLowerCase()) != -1 ||
+                        item.name.toLowerCase()
+                                 .indexOf($scope.searchText.toLowerCase()) != -1) {
+                        return true;
+                    }
+                }
+
+                return false;
+            };
         });
