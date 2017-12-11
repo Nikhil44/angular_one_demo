@@ -3,86 +3,37 @@
 <head>
 	<script src="node_modules/angular/angular.min.js"></script>
 	<script src="demo.js"></script>
+    <link href="styles.css" rel="stylesheet" />
 </head>
-<body>
-	<div ng-controller= "myController">
-		<div>
-			{{ message}}
-		</div>
-		<br>
-		<div>
-
-			Rows to display : <input type="number" step="1" ng-model="rowCount" max="5" min="0" />
-			<br /><br />
-
-			Sort By :
-			<select ng-model="sortColumn">
-				<option value="">---Please select---</option>
-				<option  value="name"   >Name ASC</option>
-				<option  value="+dateOfBirth">Date of Birth ASC</option>
-				<option value="+gender">Gender ASC</option>
-				<option value="-salary">Salary DESC</option>
-			</select>
-
-
-			<table>
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Date of Birth</th>
-						<th>Gender</th>
-						<th>Salary (number filter)</th>
-						<th>Salary (currency filter)</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="employee in emp | limitTo:rowCount | orderBy:sortColumn">
-						<td> {{ employee.name | uppercase }} </td>
-						<td> {{ employee.dateOfBirth | date:"dd/MM/yyyy" }} </td>
-						<td> {{ employee.gender }} </td>
-						<td> {{ employee.salary | number:2 }} </td>
-						<td> {{ employee.salary | currency : "£" : 1 }} </td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-		<ul ng-repeat = "country in countries" ng-init="parentIndex = $index">
-			<li>
-				{{country.name}}- Index = {{ $index }}
-				<ul>
-					<li ng-repeat = "city in country.cities">
-						{{ city.name}}- Parent Index = {{ parentIndex }}, Index = {{ $index }}
-					</li>
-				</ul>
-			</li>
-		</ul>
-
-
-
-
-		<table>
-			<thead>
-				<tr>
-					<th>Name</th>
-					<th>Likes</th>
-					<th>Dislikes</th>
-					<th>Like/Dislike</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="technology in technologies">
-					<td> {{ technology.name }} </td>
-					<td style="text-align:center"> {{ technology.likes }} </td>
-					<td style="text-align:center"> {{ technology.dislikes }} </td>
-					<td>
-						<input type="button" ng-click="incrementLikes(technology)" value="Like" />
-						<input type="button" ng-click="incrementDislikes(technology)" value="Dislike" />
-					</td>
-				</tr>
-			</tbody>
-		</table>
-
-	</div>
+<body ng-app="myModule">
+    <div ng-controller="myController">
+        <table>
+            <thead>
+                <tr>
+                    <th ng-click="sortData('name')">
+                        Name <div ng-class="getSortClass('name')"></div>
+                    </th>
+                    <th ng-click="sortData('dateOfBirth')">
+                        Date of Birth <div ng-class="getSortClass('dateOfBirth')"></div>
+                    </th>
+                    <th ng-click="sortData('gender')">
+                        Gender <div ng-class="getSortClass('gender')"></div>
+                    </th>
+                    <th ng-click="sortData('salary')">
+                        Salary <div ng-class="getSortClass('salary')"></div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="employee in employees | orderBy:sortColumn:reverseSort">
+                    <td> {{ employee.name }} </td>
+                    <td> {{ employee.dateOfBirth | date:"dd/MM/yyyy" }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary  }} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </body>
+</html>
 </html>
