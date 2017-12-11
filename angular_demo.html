@@ -11,43 +11,36 @@
     </div>
    <br>
 <div>
-	<div>First name: {{emp.firstName}}</div>
-	<div>Last name: {{emp.lastName}}</div>
-	<div>Gender: {{emp.lastName}}</div>
+<table>
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Gender</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+	<tbody>
+	 <tr ng-repeat="employee in emp">
+                    <td> {{ employee.firstName }} </td>
+                    <td> {{ employee.lastName }} </td>
+                    <td> {{ employee.gender }} </td>
+                    <td> {{ employee.salary }} </td>
+          </tr>
+     </tbody>
+  </table>
 </div>
 
-<br><br>
-<div>
-  <table>
-            <tr>
-                <td>
-                    First Name
-                </td>
-                <td>
-                    <input type="text" placeholder="Firstname"
-                           ng-model="emp.firstName" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Last Name
-                </td>
-                <td>
-                    <input type="text" placeholder="Lastname"
-                           ng-model="emp.lastName" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Gender
-                </td>
-                <td>
-                    <input type="text" placeholder="Gender"
-                           ng-model="emp.gender" />
-                </td>
-            </tr>
-        </table>
-</div>
+<ul ng-repeat = "country in countries" ng-init="parentIndex = $index">
+	<li>
+		{{country.name}}- Index = {{ $index }}
+		<ul>
+			<li ng-repeat = "city in country.cities">
+					{{ city.name}}- Parent Index = {{ parentIndex }}, Index = {{ $index }}
+			</li>
+		</ul>
+	</li>
+</ul>
 
 </div>
 </body>

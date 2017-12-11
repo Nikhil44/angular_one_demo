@@ -48,20 +48,43 @@ var myApp = angular
     .module("myModule", [])
     .controller("myController",($scope) => {
     	$scope.message = "AngularJS test app";
-        var emp = {
-            firstName: 'Kapil',
-            lastName: 'Bang',
-            gender: 'Male'
-        };
+    	var emp = [
+                    { firstName: "anc", lastName: "DD", gender: "Male", salary: 20000 },
+                    { firstName: "sdgf", lastName: "qq", gender: "Female", salary: 68000 },
+                    { firstName: "fv", lastName: "aa", gender: "Male", salary: 57000 },
+                    { firstName: "ggg", lastName: "bb", gender: "Female", salary: 53000 },
+                    { firstName: "FFF", lastName: "cc", gender: "Male", salary: 60000 }
+                ];
         $scope.emp = emp;
-    })
-    .controller("countryController", ($scope) => {
-    	  var country = {
-                        name: "INDIA",
-                        capital: "dDelhi",
-                        flag: "/home/user/test_projet/angular1_demo/img/flag.png"
-                    };
-                    $scope.country = country;
+
+         var countries = [
+                    {
+                        name: "UK",
+                        cities: [
+                            { name: "London" },
+                            { name: "Birmingham" },
+                            { name: "Manchester" }
+                        ]
+                    },
+                    {
+                        name: "USA",
+                        cities: [
+                            { name: "Los Angeles" },
+                            { name: "Chicago" },
+                            { name: "Houston" }
+                        ]
+                    },
+                    {
+                        name: "India",
+                        cities: [
+                            { name: "Hyderabad" },
+                            { name: "Chennai" },
+                            { name: "Mumbai" }
+                        ]
+                    }
+                ];
+
+                $scope.countries = countries;
     });
 
 
