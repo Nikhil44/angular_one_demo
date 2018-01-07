@@ -9,8 +9,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "angular": "^1.6.6",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongojs": "^2.4.1"
+    "mongojs": "^2.4.1",
+    "mongoose": "^5.0.0-rc2",
+    "morgan": "^1.9.0"
   }
 }

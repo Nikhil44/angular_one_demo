@@ -1,0 +1,1179 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/nikhil/.nvm/versions/node/v5.0.0/bin/node',
+1 verbose cli   '/home/nikhil/.nvm/versions/node/v5.0.0/bin/npm',
+1 verbose cli   'install' ]
+2 info using npm@3.3.6
+3 info using node@v5.0.0
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly install normalizeTree
+8 silly loadCurrentTree Finishing
+9 silly loadIdealTree Starting
+10 silly install loadIdealTree
+11 silly cloneCurrentTree Starting
+12 silly install cloneCurrentTreeToIdealTree
+13 silly cloneCurrentTree Finishing
+14 silly loadShrinkwrap Starting
+15 silly install loadShrinkwrap
+16 silly loadShrinkwrap Finishing
+17 silly loadAllDepsIntoIdealTree Starting
+18 silly install loadAllDepsIntoIdealTree
+19 silly fetchNamedPackageData morgan
+20 silly mapToRegistry name morgan
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/morgan
+24 verbose request uri https://registry.npmjs.org/morgan
+25 verbose request no auth needed
+26 info attempt registry request try #1 at 12:10:31 AM
+27 verbose request id d76217de55400e90
+28 verbose etag "5a4ff5f3-e8e8"
+29 verbose lastModified Fri, 5 Jan 2018 22:02:27 GMT
+30 http request GET https://registry.npmjs.org/morgan
+31 http 304 https://registry.npmjs.org/morgan
+32 verbose headers { date: 'Sun, 07 Jan 2018 18:40:32 GMT',
+32 verbose headers   via: '1.1 varnish',
+32 verbose headers   'cache-control': 'max-age=300',
+32 verbose headers   etag: '"5a4ff5f3-e8e8"',
+32 verbose headers   age: '1644',
+32 verbose headers   connection: 'keep-alive',
+32 verbose headers   'x-served-by': 'cache-ams4149-AMS',
+32 verbose headers   'x-cache': 'HIT',
+32 verbose headers   'x-cache-hits': '1',
+32 verbose headers   'x-timer': 'S1515350432.205733,VS0,VE1',
+32 verbose headers   vary: 'Accept-Encoding, Accept' }
+33 silly get cb [ 304,
+33 silly get   { date: 'Sun, 07 Jan 2018 18:40:32 GMT',
+33 silly get     via: '1.1 varnish',
+33 silly get     'cache-control': 'max-age=300',
+33 silly get     etag: '"5a4ff5f3-e8e8"',
+33 silly get     age: '1644',
+33 silly get     connection: 'keep-alive',
+33 silly get     'x-served-by': 'cache-ams4149-AMS',
+33 silly get     'x-cache': 'HIT',
+33 silly get     'x-cache-hits': '1',
+33 silly get     'x-timer': 'S1515350432.205733,VS0,VE1',
+33 silly get     vary: 'Accept-Encoding, Accept' } ]
+34 verbose etag https://registry.npmjs.org/morgan from cache
+35 verbose get saving morgan to /home/nikhil/.npm/registry.npmjs.org/morgan/.cache.json
+36 silly resolveWithNewModule morgan@1.9.0 checking installable status
+37 silly cache add args [ 'morgan@^1.9.0', null ]
+38 verbose cache add spec morgan@^1.9.0
+39 silly cache add parsed spec Result {
+39 silly cache add   raw: 'morgan@^1.9.0',
+39 silly cache add   scope: null,
+39 silly cache add   name: 'morgan',
+39 silly cache add   rawSpec: '^1.9.0',
+39 silly cache add   spec: '>=1.9.0 <2.0.0',
+39 silly cache add   type: 'range' }
+40 silly addNamed morgan@>=1.9.0 <2.0.0
+41 verbose addNamed ">=1.9.0 <2.0.0" is a valid semver range for morgan
+42 silly addNameRange { name: 'morgan', range: '>=1.9.0 <2.0.0', hasData: false }
+43 silly mapToRegistry name morgan
+44 silly mapToRegistry using default registry
+45 silly mapToRegistry registry https://registry.npmjs.org/
+46 silly mapToRegistry uri https://registry.npmjs.org/morgan
+47 verbose addNameRange registry:https://registry.npmjs.org/morgan not in flight; fetching
+48 verbose get https://registry.npmjs.org/morgan not expired, no request
+49 silly addNameRange number 2 { name: 'morgan', range: '>=1.9.0 <2.0.0', hasData: true }
+50 silly addNameRange versions [ 'morgan',
+50 silly addNameRange   [ '1.0.0',
+50 silly addNameRange     '1.0.1',
+50 silly addNameRange     '1.1.0',
+50 silly addNameRange     '1.1.1',
+50 silly addNameRange     '1.2.0',
+50 silly addNameRange     '1.2.1',
+50 silly addNameRange     '1.2.2',
+50 silly addNameRange     '1.2.3',
+50 silly addNameRange     '1.3.0',
+50 silly addNameRange     '1.3.1',
+50 silly addNameRange     '1.3.2',
+50 silly addNameRange     '1.4.0',
+50 silly addNameRange     '1.4.1',
+50 silly addNameRange     '1.5.0',
+50 silly addNameRange     '1.5.1',
+50 silly addNameRange     '1.5.2',
+50 silly addNameRange     '1.5.3',
+50 silly addNameRange     '1.6.0',
+50 silly addNameRange     '1.6.1',
+50 silly addNameRange     '1.7.0',
+50 silly addNameRange     '1.8.0',
+50 silly addNameRange     '1.8.1',
+50 silly addNameRange     '1.8.2',
+50 silly addNameRange     '1.9.0' ] ]
+51 silly addNamed morgan@1.9.0
+52 verbose addNamed "1.9.0" is a plain semver version for morgan
+53 silly cache afterAdd morgan@1.9.0
+54 verbose afterAdd /home/nikhil/.npm/morgan/1.9.0/package/package.json not in flight; writing
+55 verbose afterAdd /home/nikhil/.npm/morgan/1.9.0/package/package.json written
+56 silly fetchNamedPackageData basic-auth
+57 silly mapToRegistry name basic-auth
+58 silly mapToRegistry using default registry
+59 silly mapToRegistry registry https://registry.npmjs.org/
+60 silly mapToRegistry uri https://registry.npmjs.org/basic-auth
+61 silly fetchNamedPackageData on-headers
+62 silly mapToRegistry name on-headers
+63 silly mapToRegistry using default registry
+64 silly mapToRegistry registry https://registry.npmjs.org/
+65 silly mapToRegistry uri https://registry.npmjs.org/on-headers
+66 verbose request uri https://registry.npmjs.org/basic-auth
+67 verbose request no auth needed
+68 info attempt registry request try #1 at 12:10:32 AM
+69 verbose etag "5a3ef7f0-3df2"
+70 verbose lastModified Sun, 24 Dec 2017 0:42:24 GMT
+71 http request GET https://registry.npmjs.org/basic-auth
+72 verbose request uri https://registry.npmjs.org/on-headers
+73 verbose request no auth needed
+74 info attempt registry request try #1 at 12:10:32 AM
+75 verbose etag "59a791a7-1a43"
+76 verbose lastModified Thu, 31 Aug 2017 4:33:43 GMT
+77 http request GET https://registry.npmjs.org/on-headers
+78 http 304 https://registry.npmjs.org/basic-auth
+79 verbose headers { date: 'Sun, 07 Jan 2018 18:40:32 GMT',
+79 verbose headers   via: '1.1 varnish',
+79 verbose headers   'cache-control': 'max-age=300',
+79 verbose headers   etag: '"5a3ef7f0-3df2"',
+79 verbose headers   age: '470',
+79 verbose headers   connection: 'keep-alive',
+79 verbose headers   'x-served-by': 'cache-ams4430-AMS',
+79 verbose headers   'x-cache': 'HIT',
+79 verbose headers   'x-cache-hits': '1',
+79 verbose headers   'x-timer': 'S1515350433.960206,VS0,VE1',
+79 verbose headers   vary: 'Accept-Encoding, Accept' }
+80 silly get cb [ 304,
+80 silly get   { date: 'Sun, 07 Jan 2018 18:40:32 GMT',
+80 silly get     via: '1.1 varnish',
+80 silly get     'cache-control': 'max-age=300',
+80 silly get     etag: '"5a3ef7f0-3df2"',
+80 silly get     age: '470',
+80 silly get     connection: 'keep-alive',
+80 silly get     'x-served-by': 'cache-ams4430-AMS',
+80 silly get     'x-cache': 'HIT',
+80 silly get     'x-cache-hits': '1',
+80 silly get     'x-timer': 'S1515350433.960206,VS0,VE1',
+80 silly get     vary: 'Accept-Encoding, Accept' } ]
+81 verbose etag https://registry.npmjs.org/basic-auth from cache
+82 verbose get saving basic-auth to /home/nikhil/.npm/registry.npmjs.org/basic-auth/.cache.json
+83 silly resolveWithNewModule basic-auth@2.0.0 checking installable status
+84 silly cache add args [ 'basic-auth@~2.0.0', null ]
+85 verbose cache add spec basic-auth@~2.0.0
+86 silly cache add parsed spec Result {
+86 silly cache add   raw: 'basic-auth@~2.0.0',
+86 silly cache add   scope: null,
+86 silly cache add   name: 'basic-auth',
+86 silly cache add   rawSpec: '~2.0.0',
+86 silly cache add   spec: '>=2.0.0 <2.1.0',
+86 silly cache add   type: 'range' }
+87 silly addNamed basic-auth@>=2.0.0 <2.1.0
+88 verbose addNamed ">=2.0.0 <2.1.0" is a valid semver range for basic-auth
+89 silly addNameRange { name: 'basic-auth', range: '>=2.0.0 <2.1.0', hasData: false }
+90 silly mapToRegistry name basic-auth
+91 silly mapToRegistry using default registry
+92 silly mapToRegistry registry https://registry.npmjs.org/
+93 silly mapToRegistry uri https://registry.npmjs.org/basic-auth
+94 verbose addNameRange registry:https://registry.npmjs.org/basic-auth not in flight; fetching
+95 verbose get https://registry.npmjs.org/basic-auth not expired, no request
+96 silly addNameRange number 2 { name: 'basic-auth', range: '>=2.0.0 <2.1.0', hasData: true }
+97 silly addNameRange versions [ 'basic-auth',
+97 silly addNameRange   [ '0.0.1',
+97 silly addNameRange     '1.0.0',
+97 silly addNameRange     '1.0.1',
+97 silly addNameRange     '1.0.2',
+97 silly addNameRange     '1.0.3',
+97 silly addNameRange     '1.0.4',
+97 silly addNameRange     '1.1.0',
+97 silly addNameRange     '2.0.0' ] ]
+98 silly addNamed basic-auth@2.0.0
+99 verbose addNamed "2.0.0" is a plain semver version for basic-auth
+100 http 304 https://registry.npmjs.org/on-headers
+101 verbose headers { date: 'Sun, 07 Jan 2018 18:40:32 GMT',
+101 verbose headers   via: '1.1 varnish',
+101 verbose headers   'cache-control': 'max-age=300',
+101 verbose headers   etag: '"59a791a7-1a43"',
+101 verbose headers   age: '13370',
+101 verbose headers   connection: 'keep-alive',
+101 verbose headers   'x-served-by': 'cache-ams4144-AMS',
+101 verbose headers   'x-cache': 'HIT',
+101 verbose headers   'x-cache-hits': '23',
+101 verbose headers   'x-timer': 'S1515350433.997701,VS0,VE0',
+101 verbose headers   vary: 'Accept-Encoding, Accept' }
+102 silly get cb [ 304,
+102 silly get   { date: 'Sun, 07 Jan 2018 18:40:32 GMT',
+102 silly get     via: '1.1 varnish',
+102 silly get     'cache-control': 'max-age=300',
+102 silly get     etag: '"59a791a7-1a43"',
+102 silly get     age: '13370',
+102 silly get     connection: 'keep-alive',
+102 silly get     'x-served-by': 'cache-ams4144-AMS',
+102 silly get     'x-cache': 'HIT',
+102 silly get     'x-cache-hits': '23',
+102 silly get     'x-timer': 'S1515350433.997701,VS0,VE0',
+102 silly get     vary: 'Accept-Encoding, Accept' } ]
+103 verbose etag https://registry.npmjs.org/on-headers from cache
+104 verbose get saving on-headers to /home/nikhil/.npm/registry.npmjs.org/on-headers/.cache.json
+105 silly resolveWithNewModule on-headers@1.0.1 checking installable status
+106 silly cache add args [ 'on-headers@~1.0.1', null ]
+107 verbose cache add spec on-headers@~1.0.1
+108 silly cache add parsed spec Result {
+108 silly cache add   raw: 'on-headers@~1.0.1',
+108 silly cache add   scope: null,
+108 silly cache add   name: 'on-headers',
+108 silly cache add   rawSpec: '~1.0.1',
+108 silly cache add   spec: '>=1.0.1 <1.1.0',
+108 silly cache add   type: 'range' }
+109 silly addNamed on-headers@>=1.0.1 <1.1.0
+110 verbose addNamed ">=1.0.1 <1.1.0" is a valid semver range for on-headers
+111 silly addNameRange { name: 'on-headers', range: '>=1.0.1 <1.1.0', hasData: false }
+112 silly mapToRegistry name on-headers
+113 silly mapToRegistry using default registry
+114 silly mapToRegistry registry https://registry.npmjs.org/
+115 silly mapToRegistry uri https://registry.npmjs.org/on-headers
+116 verbose addNameRange registry:https://registry.npmjs.org/on-headers not in flight; fetching
+117 verbose get https://registry.npmjs.org/on-headers not expired, no request
+118 silly addNameRange number 2 { name: 'on-headers', range: '>=1.0.1 <1.1.0', hasData: true }
+119 silly addNameRange versions [ 'on-headers', [ '0.0.0', '1.0.0', '1.0.1' ] ]
+120 silly addNamed on-headers@1.0.1
+121 verbose addNamed "1.0.1" is a plain semver version for on-headers
+122 silly cache afterAdd basic-auth@2.0.0
+123 verbose afterAdd /home/nikhil/.npm/basic-auth/2.0.0/package/package.json not in flight; writing
+124 silly cache afterAdd on-headers@1.0.1
+125 verbose afterAdd /home/nikhil/.npm/on-headers/1.0.1/package/package.json not in flight; writing
+126 verbose afterAdd /home/nikhil/.npm/basic-auth/2.0.0/package/package.json written
+127 verbose afterAdd /home/nikhil/.npm/on-headers/1.0.1/package/package.json written
+128 silly loadAllDepsIntoIdealTree Finishing
+129 silly idealTree:prePrune angular1_demo@1.0.0
+129 silly idealTree:prePrune +-- accepts@1.3.4
+129 silly idealTree:prePrune +-- angular-route@1.6.8
+129 silly idealTree:prePrune +-- angular@1.6.6
+129 silly idealTree:prePrune +-- array-flatten@1.1.1
+129 silly idealTree:prePrune +-- basic-auth@2.0.0
+129 silly idealTree:prePrune +-- body-parser@1.18.2
+129 silly idealTree:prePrune +-- bson@1.0.4
+129 silly idealTree:prePrune +-- buffer-shims@1.0.0
+129 silly idealTree:prePrune +-- bytes@3.0.0
+129 silly idealTree:prePrune +-- content-disposition@0.5.2
+129 silly idealTree:prePrune +-- content-type@1.0.4
+129 silly idealTree:prePrune +-- cookie-signature@1.0.6
+129 silly idealTree:prePrune +-- cookie@0.3.1
+129 silly idealTree:prePrune +-- core-util-is@1.0.2
+129 silly idealTree:prePrune +-- debug@2.6.9
+129 silly idealTree:prePrune +-- depd@1.1.1
+129 silly idealTree:prePrune +-- destroy@1.0.4
+129 silly idealTree:prePrune +-- each-series@1.0.0
+129 silly idealTree:prePrune +-- ee-first@1.1.1
+129 silly idealTree:prePrune +-- encodeurl@1.0.1
+129 silly idealTree:prePrune +-- es6-promise@3.2.1
+129 silly idealTree:prePrune +-- escape-html@1.0.3
+129 silly idealTree:prePrune +-- etag@1.8.1
+129 silly idealTree:prePrune +-- express@4.16.2
+129 silly idealTree:prePrune +-- finalhandler@1.1.0
+129 silly idealTree:prePrune +-- forwarded@0.1.2
+129 silly idealTree:prePrune +-- fresh@0.5.2
+129 silly idealTree:prePrune +-- http-errors@1.6.2
+129 silly idealTree:prePrune | `-- setprototypeof@1.0.3
+129 silly idealTree:prePrune +-- iconv-lite@0.4.19
+129 silly idealTree:prePrune +-- inherits@2.0.3
+129 silly idealTree:prePrune +-- ipaddr.js@1.5.2
+129 silly idealTree:prePrune +-- isarray@1.0.0
+129 silly idealTree:prePrune +-- media-typer@0.3.0
+129 silly idealTree:prePrune +-- merge-descriptors@1.0.1
+129 silly idealTree:prePrune +-- methods@1.1.2
+129 silly idealTree:prePrune +-- mime-db@1.30.0
+129 silly idealTree:prePrune +-- mime-types@2.1.17
+129 silly idealTree:prePrune +-- mime@1.4.1
+129 silly idealTree:prePrune +-- mongodb-core@2.1.17
+129 silly idealTree:prePrune +-- mongodb@2.2.33
+129 silly idealTree:prePrune | `-- readable-stream@2.2.7
+129 silly idealTree:prePrune +-- mongojs@2.4.1
+129 silly idealTree:prePrune +-- morgan@1.9.0
+129 silly idealTree:prePrune +-- ms@2.0.0
+129 silly idealTree:prePrune +-- negotiator@0.6.1
+129 silly idealTree:prePrune +-- on-finished@2.3.0
+129 silly idealTree:prePrune +-- on-headers@1.0.1
+129 silly idealTree:prePrune +-- once@1.4.0
+129 silly idealTree:prePrune +-- parse-mongo-url@1.1.1
+129 silly idealTree:prePrune +-- parseurl@1.3.2
+129 silly idealTree:prePrune +-- path-to-regexp@0.1.7
+129 silly idealTree:prePrune +-- process-nextick-args@1.0.7
+129 silly idealTree:prePrune +-- proxy-addr@2.0.2
+129 silly idealTree:prePrune +-- qs@6.5.1
+129 silly idealTree:prePrune +-- range-parser@1.2.0
+129 silly idealTree:prePrune +-- raw-body@2.3.2
+129 silly idealTree:prePrune +-- readable-stream@2.3.3
+129 silly idealTree:prePrune +-- require_optional@1.0.1
+129 silly idealTree:prePrune +-- resolve-from@2.0.0
+129 silly idealTree:prePrune +-- safe-buffer@5.1.1
+129 silly idealTree:prePrune +-- semver@5.4.1
+129 silly idealTree:prePrune +-- send@0.16.1
+129 silly idealTree:prePrune +-- serve-static@1.13.1
+129 silly idealTree:prePrune +-- setprototypeof@1.1.0
+129 silly idealTree:prePrune +-- statuses@1.3.1
+129 silly idealTree:prePrune +-- string_decoder@1.0.3
+129 silly idealTree:prePrune +-- thunky@1.0.2
+129 silly idealTree:prePrune +-- to-mongodb-core@2.0.0
+129 silly idealTree:prePrune +-- type-is@1.6.15
+129 silly idealTree:prePrune +-- unpipe@1.0.0
+129 silly idealTree:prePrune +-- util-deprecate@1.0.2
+129 silly idealTree:prePrune +-- utils-merge@1.0.1
+129 silly idealTree:prePrune +-- vary@1.1.2
+129 silly idealTree:prePrune +-- wrappy@1.0.2
+129 silly idealTree:prePrune `-- xtend@4.0.1
+130 silly loadIdealTree Finishing
+131 silly currentTree angular1_demo@1.0.0
+131 silly currentTree +-- accepts@1.3.4
+131 silly currentTree +-- angular-route@1.6.8
+131 silly currentTree +-- angular@1.6.6
+131 silly currentTree +-- array-flatten@1.1.1
+131 silly currentTree +-- body-parser@1.18.2
+131 silly currentTree +-- bson@1.0.4
+131 silly currentTree +-- buffer-shims@1.0.0
+131 silly currentTree +-- bytes@3.0.0
+131 silly currentTree +-- content-disposition@0.5.2
+131 silly currentTree +-- content-type@1.0.4
+131 silly currentTree +-- cookie-signature@1.0.6
+131 silly currentTree +-- cookie@0.3.1
+131 silly currentTree +-- core-util-is@1.0.2
+131 silly currentTree +-- debug@2.6.9
+131 silly currentTree +-- depd@1.1.1
+131 silly currentTree +-- destroy@1.0.4
+131 silly currentTree +-- each-series@1.0.0
+131 silly currentTree +-- ee-first@1.1.1
+131 silly currentTree +-- encodeurl@1.0.1
+131 silly currentTree +-- es6-promise@3.2.1
+131 silly currentTree +-- escape-html@1.0.3
+131 silly currentTree +-- etag@1.8.1
+131 silly currentTree +-- express@4.16.2
+131 silly currentTree +-- finalhandler@1.1.0
+131 silly currentTree +-- forwarded@0.1.2
+131 silly currentTree +-- fresh@0.5.2
+131 silly currentTree +-- http-errors@1.6.2
+131 silly currentTree | `-- setprototypeof@1.0.3
+131 silly currentTree +-- iconv-lite@0.4.19
+131 silly currentTree +-- inherits@2.0.3
+131 silly currentTree +-- ipaddr.js@1.5.2
+131 silly currentTree +-- isarray@1.0.0
+131 silly currentTree +-- media-typer@0.3.0
+131 silly currentTree +-- merge-descriptors@1.0.1
+131 silly currentTree +-- methods@1.1.2
+131 silly currentTree +-- mime-db@1.30.0
+131 silly currentTree +-- mime-types@2.1.17
+131 silly currentTree +-- mime@1.4.1
+131 silly currentTree +-- mongodb-core@2.1.17
+131 silly currentTree +-- mongodb@2.2.33
+131 silly currentTree | `-- readable-stream@2.2.7
+131 silly currentTree +-- mongojs@2.4.1
+131 silly currentTree +-- ms@2.0.0
+131 silly currentTree +-- negotiator@0.6.1
+131 silly currentTree +-- on-finished@2.3.0
+131 silly currentTree +-- once@1.4.0
+131 silly currentTree +-- parse-mongo-url@1.1.1
+131 silly currentTree +-- parseurl@1.3.2
+131 silly currentTree +-- path-to-regexp@0.1.7
+131 silly currentTree +-- process-nextick-args@1.0.7
+131 silly currentTree +-- proxy-addr@2.0.2
+131 silly currentTree +-- qs@6.5.1
+131 silly currentTree +-- range-parser@1.2.0
+131 silly currentTree +-- raw-body@2.3.2
+131 silly currentTree +-- readable-stream@2.3.3
+131 silly currentTree +-- require_optional@1.0.1
+131 silly currentTree +-- resolve-from@2.0.0
+131 silly currentTree +-- safe-buffer@5.1.1
+131 silly currentTree +-- semver@5.4.1
+131 silly currentTree +-- send@0.16.1
+131 silly currentTree +-- serve-static@1.13.1
+131 silly currentTree +-- setprototypeof@1.1.0
+131 silly currentTree +-- statuses@1.3.1
+131 silly currentTree +-- string_decoder@1.0.3
+131 silly currentTree +-- thunky@1.0.2
+131 silly currentTree +-- to-mongodb-core@2.0.0
+131 silly currentTree +-- type-is@1.6.15
+131 silly currentTree +-- unpipe@1.0.0
+131 silly currentTree +-- util-deprecate@1.0.2
+131 silly currentTree +-- utils-merge@1.0.1
+131 silly currentTree +-- vary@1.1.2
+131 silly currentTree +-- wrappy@1.0.2
+131 silly currentTree `-- xtend@4.0.1
+132 silly idealTree angular1_demo@1.0.0
+132 silly idealTree +-- accepts@1.3.4
+132 silly idealTree +-- angular-route@1.6.8
+132 silly idealTree +-- angular@1.6.6
+132 silly idealTree +-- array-flatten@1.1.1
+132 silly idealTree +-- basic-auth@2.0.0
+132 silly idealTree +-- body-parser@1.18.2
+132 silly idealTree +-- bson@1.0.4
+132 silly idealTree +-- buffer-shims@1.0.0
+132 silly idealTree +-- bytes@3.0.0
+132 silly idealTree +-- content-disposition@0.5.2
+132 silly idealTree +-- content-type@1.0.4
+132 silly idealTree +-- cookie-signature@1.0.6
+132 silly idealTree +-- cookie@0.3.1
+132 silly idealTree +-- core-util-is@1.0.2
+132 silly idealTree +-- debug@2.6.9
+132 silly idealTree +-- depd@1.1.1
+132 silly idealTree +-- destroy@1.0.4
+132 silly idealTree +-- each-series@1.0.0
+132 silly idealTree +-- ee-first@1.1.1
+132 silly idealTree +-- encodeurl@1.0.1
+132 silly idealTree +-- es6-promise@3.2.1
+132 silly idealTree +-- escape-html@1.0.3
+132 silly idealTree +-- etag@1.8.1
+132 silly idealTree +-- express@4.16.2
+132 silly idealTree +-- finalhandler@1.1.0
+132 silly idealTree +-- forwarded@0.1.2
+132 silly idealTree +-- fresh@0.5.2
+132 silly idealTree +-- http-errors@1.6.2
+132 silly idealTree | `-- setprototypeof@1.0.3
+132 silly idealTree +-- iconv-lite@0.4.19
+132 silly idealTree +-- inherits@2.0.3
+132 silly idealTree +-- ipaddr.js@1.5.2
+132 silly idealTree +-- isarray@1.0.0
+132 silly idealTree +-- media-typer@0.3.0
+132 silly idealTree +-- merge-descriptors@1.0.1
+132 silly idealTree +-- methods@1.1.2
+132 silly idealTree +-- mime-db@1.30.0
+132 silly idealTree +-- mime-types@2.1.17
+132 silly idealTree +-- mime@1.4.1
+132 silly idealTree +-- mongodb-core@2.1.17
+132 silly idealTree +-- mongodb@2.2.33
+132 silly idealTree | `-- readable-stream@2.2.7
+132 silly idealTree +-- mongojs@2.4.1
+132 silly idealTree +-- morgan@1.9.0
+132 silly idealTree +-- ms@2.0.0
+132 silly idealTree +-- negotiator@0.6.1
+132 silly idealTree +-- on-finished@2.3.0
+132 silly idealTree +-- on-headers@1.0.1
+132 silly idealTree +-- once@1.4.0
+132 silly idealTree +-- parse-mongo-url@1.1.1
+132 silly idealTree +-- parseurl@1.3.2
+132 silly idealTree +-- path-to-regexp@0.1.7
+132 silly idealTree +-- process-nextick-args@1.0.7
+132 silly idealTree +-- proxy-addr@2.0.2
+132 silly idealTree +-- qs@6.5.1
+132 silly idealTree +-- range-parser@1.2.0
+132 silly idealTree +-- raw-body@2.3.2
+132 silly idealTree +-- readable-stream@2.3.3
+132 silly idealTree +-- require_optional@1.0.1
+132 silly idealTree +-- resolve-from@2.0.0
+132 silly idealTree +-- safe-buffer@5.1.1
+132 silly idealTree +-- semver@5.4.1
+132 silly idealTree +-- send@0.16.1
+132 silly idealTree +-- serve-static@1.13.1
+132 silly idealTree +-- setprototypeof@1.1.0
+132 silly idealTree +-- statuses@1.3.1
+132 silly idealTree +-- string_decoder@1.0.3
+132 silly idealTree +-- thunky@1.0.2
+132 silly idealTree +-- to-mongodb-core@2.0.0
+132 silly idealTree +-- type-is@1.6.15
+132 silly idealTree +-- unpipe@1.0.0
+132 silly idealTree +-- util-deprecate@1.0.2
+132 silly idealTree +-- utils-merge@1.0.1
+132 silly idealTree +-- vary@1.1.2
+132 silly idealTree +-- wrappy@1.0.2
+132 silly idealTree `-- xtend@4.0.1
+133 silly generateActionsToTake Starting
+134 silly install generateActionsToTake
+135 silly generateActionsToTake Finishing
+136 silly diffTrees action count 3
+137 silly diffTrees add basic-auth@2.0.0
+138 silly diffTrees add on-headers@1.0.1
+139 silly diffTrees add morgan@1.9.0
+140 silly decomposeActions action count 24
+141 silly decomposeActions fetch basic-auth@2.0.0
+142 silly decomposeActions extract basic-auth@2.0.0
+143 silly decomposeActions preinstall basic-auth@2.0.0
+144 silly decomposeActions build basic-auth@2.0.0
+145 silly decomposeActions install basic-auth@2.0.0
+146 silly decomposeActions postinstall basic-auth@2.0.0
+147 silly decomposeActions test basic-auth@2.0.0
+148 silly decomposeActions finalize basic-auth@2.0.0
+149 silly decomposeActions fetch on-headers@1.0.1
+150 silly decomposeActions extract on-headers@1.0.1
+151 silly decomposeActions preinstall on-headers@1.0.1
+152 silly decomposeActions build on-headers@1.0.1
+153 silly decomposeActions install on-headers@1.0.1
+154 silly decomposeActions postinstall on-headers@1.0.1
+155 silly decomposeActions test on-headers@1.0.1
+156 silly decomposeActions finalize on-headers@1.0.1
+157 silly decomposeActions fetch morgan@1.9.0
+158 silly decomposeActions extract morgan@1.9.0
+159 silly decomposeActions preinstall morgan@1.9.0
+160 silly decomposeActions build morgan@1.9.0
+161 silly decomposeActions install morgan@1.9.0
+162 silly decomposeActions postinstall morgan@1.9.0
+163 silly decomposeActions test morgan@1.9.0
+164 silly decomposeActions finalize morgan@1.9.0
+165 silly executeActions Starting
+166 silly install executeActions
+167 silly doSerial global-install 0
+168 silly doParallel fetch 3
+169 verbose lock using /home/nikhil/.npm/_locks/staging-42a2fd2c1b604725.lock for /home/nikhil/workplace/angular_one_demo/node_modules/.staging
+170 silly doParallel extract 3
+171 silly extract basic-auth
+172 silly extract on-headers
+173 silly extract morgan
+174 verbose unbuild node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+175 verbose unbuild node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+176 verbose unbuild node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+177 silly gentlyRm /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922 is being purged from base /home/nikhil/workplace/angular_one_demo
+178 silly gentlyRm /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48 is being purged from base /home/nikhil/workplace/angular_one_demo
+179 silly gentlyRm /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227 is being purged from base /home/nikhil/workplace/angular_one_demo
+180 verbose gentlyRm don't care about contents; nuking /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+181 verbose gentlyRm don't care about contents; nuking /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+182 verbose gentlyRm don't care about contents; nuking /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+183 verbose tar unpack /home/nikhil/.npm/basic-auth/2.0.0/package.tgz
+184 verbose tar unpacking to /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+185 silly gentlyRm /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922 is being purged
+186 verbose tar unpack /home/nikhil/.npm/on-headers/1.0.1/package.tgz
+187 verbose tar unpacking to /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+188 silly gentlyRm /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48 is being purged
+189 verbose tar unpack /home/nikhil/.npm/morgan/1.9.0/package.tgz
+190 verbose tar unpacking to /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+191 silly gentlyRm /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227 is being purged
+192 verbose gentlyRm don't care about contents; nuking /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+193 verbose gentlyRm don't care about contents; nuking /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+194 verbose gentlyRm don't care about contents; nuking /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+195 silly gunzTarPerm modes [ '775', '664' ]
+196 silly gunzTarPerm modes [ '775', '664' ]
+197 silly gunzTarPerm modes [ '775', '664' ]
+198 silly gunzTarPerm extractEntry package.json
+199 silly gunzTarPerm modified mode [ 'package.json', 438, 436 ]
+200 silly gunzTarPerm extractEntry package.json
+201 silly gunzTarPerm modified mode [ 'package.json', 438, 436 ]
+202 silly gunzTarPerm extractEntry package.json
+203 silly gunzTarPerm modified mode [ 'package.json', 438, 436 ]
+204 silly gunzTarPerm extractEntry README.md
+205 silly gunzTarPerm modified mode [ 'README.md', 438, 436 ]
+206 silly gunzTarPerm extractEntry LICENSE
+207 silly gunzTarPerm modified mode [ 'LICENSE', 438, 436 ]
+208 silly gunzTarPerm extractEntry README.md
+209 silly gunzTarPerm modified mode [ 'README.md', 438, 436 ]
+210 silly gunzTarPerm extractEntry LICENSE
+211 silly gunzTarPerm modified mode [ 'LICENSE', 438, 436 ]
+212 silly gunzTarPerm extractEntry README.md
+213 silly gunzTarPerm modified mode [ 'README.md', 438, 436 ]
+214 silly gunzTarPerm extractEntry LICENSE
+215 silly gunzTarPerm modified mode [ 'LICENSE', 438, 436 ]
+216 silly gunzTarPerm extractEntry index.js
+217 silly gunzTarPerm modified mode [ 'index.js', 438, 436 ]
+218 silly gunzTarPerm extractEntry HISTORY.md
+219 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 436 ]
+220 silly gunzTarPerm extractEntry index.js
+221 silly gunzTarPerm modified mode [ 'index.js', 438, 436 ]
+222 silly gunzTarPerm extractEntry HISTORY.md
+223 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 436 ]
+224 silly gunzTarPerm extractEntry index.js
+225 silly gunzTarPerm modified mode [ 'index.js', 438, 436 ]
+226 silly gunzTarPerm extractEntry HISTORY.md
+227 silly gunzTarPerm modified mode [ 'HISTORY.md', 438, 436 ]
+228 silly doParallel preinstall 3
+229 silly preinstall basic-auth /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+230 info lifecycle basic-auth@2.0.0~preinstall: basic-auth@2.0.0
+231 silly preinstall on-headers /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+232 info lifecycle on-headers@1.0.1~preinstall: on-headers@1.0.1
+233 silly preinstall morgan /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+234 info lifecycle morgan@1.9.0~preinstall: morgan@1.9.0
+235 silly lifecycle basic-auth@2.0.0~preinstall: no script for preinstall, continuing
+236 silly lifecycle on-headers@1.0.1~preinstall: no script for preinstall, continuing
+237 silly lifecycle morgan@1.9.0~preinstall: no script for preinstall, continuing
+238 silly doReverseSerial remove 0
+239 silly doSerial move 0
+240 silly doSerial finalize 3
+241 silly finalize /home/nikhil/workplace/angular_one_demo/node_modules/basic-auth
+242 silly finalize /home/nikhil/workplace/angular_one_demo/node_modules/on-headers
+243 silly finalize /home/nikhil/workplace/angular_one_demo/node_modules/morgan
+244 silly doSerial build 3
+245 silly build basic-auth
+246 info linkStuff basic-auth@2.0.0
+247 silly linkStuff basic-auth@2.0.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+248 verbose linkBins basic-auth@2.0.0
+249 verbose linkMans basic-auth@2.0.0
+250 verbose rebuildBundles basic-auth@2.0.0
+251 silly build on-headers
+252 info linkStuff on-headers@1.0.1
+253 silly linkStuff on-headers@1.0.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+254 verbose linkBins on-headers@1.0.1
+255 verbose linkMans on-headers@1.0.1
+256 verbose rebuildBundles on-headers@1.0.1
+257 silly build morgan
+258 info linkStuff morgan@1.9.0
+259 silly linkStuff morgan@1.9.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+260 verbose linkBins morgan@1.9.0
+261 verbose linkMans morgan@1.9.0
+262 verbose rebuildBundles morgan@1.9.0
+263 silly doSerial global-link 0
+264 silly doParallel update-linked 0
+265 silly doSerial install 3
+266 silly install basic-auth /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+267 info lifecycle basic-auth@2.0.0~install: basic-auth@2.0.0
+268 silly lifecycle basic-auth@2.0.0~install: no script for install, continuing
+269 silly install on-headers /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+270 info lifecycle on-headers@1.0.1~install: on-headers@1.0.1
+271 silly lifecycle on-headers@1.0.1~install: no script for install, continuing
+272 silly install morgan /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+273 info lifecycle morgan@1.9.0~install: morgan@1.9.0
+274 silly lifecycle morgan@1.9.0~install: no script for install, continuing
+275 silly doSerial postinstall 3
+276 silly postinstall basic-auth /home/nikhil/workplace/angular_one_demo/node_modules/.staging/basic-auth-9e117975f94bca310f06375c9089b922
+277 info lifecycle basic-auth@2.0.0~postinstall: basic-auth@2.0.0
+278 silly lifecycle basic-auth@2.0.0~postinstall: no script for postinstall, continuing
+279 silly postinstall on-headers /home/nikhil/workplace/angular_one_demo/node_modules/.staging/on-headers-2de0c25ba104fd1a5585a37978112e48
+280 info lifecycle on-headers@1.0.1~postinstall: on-headers@1.0.1
+281 silly lifecycle on-headers@1.0.1~postinstall: no script for postinstall, continuing
+282 silly postinstall morgan /home/nikhil/workplace/angular_one_demo/node_modules/.staging/morgan-45c83b05727492690da8b2299a569227
+283 info lifecycle morgan@1.9.0~postinstall: morgan@1.9.0
+284 silly lifecycle morgan@1.9.0~postinstall: no script for postinstall, continuing
+285 verbose unlock done using /home/nikhil/.npm/_locks/staging-42a2fd2c1b604725.lock for /home/nikhil/workplace/angular_one_demo/node_modules/.staging
+286 silly executeActions Finishing
+287 silly rollbackFailedOptional Starting
+288 silly rollbackFailedOptional Finishing
+289 silly runTopLevelLifecycles Starting
+290 silly install runTopLevelLifecycles
+291 silly preinstall angular1_demo /home/nikhil/workplace/angular_one_demo/angular1_demo-29f070b6195f58e1c2a735d2e7259b85
+292 info lifecycle angular1_demo@1.0.0~preinstall: angular1_demo@1.0.0
+293 silly lifecycle angular1_demo@1.0.0~preinstall: no script for preinstall, continuing
+294 silly build angular1_demo
+295 info linkStuff angular1_demo@1.0.0
+296 silly linkStuff angular1_demo@1.0.0 has /home/nikhil/workplace as its parent node_modules
+297 verbose linkBins angular1_demo@1.0.0
+298 verbose linkMans angular1_demo@1.0.0
+299 verbose rebuildBundles angular1_demo@1.0.0
+300 verbose rebuildBundles [ '.bin',
+300 verbose rebuildBundles   'accepts',
+300 verbose rebuildBundles   'angular',
+300 verbose rebuildBundles   'angular-route',
+300 verbose rebuildBundles   'array-flatten',
+300 verbose rebuildBundles   'basic-auth',
+300 verbose rebuildBundles   'body-parser',
+300 verbose rebuildBundles   'bson',
+300 verbose rebuildBundles   'buffer-shims',
+300 verbose rebuildBundles   'bytes',
+300 verbose rebuildBundles   'content-disposition',
+300 verbose rebuildBundles   'content-type',
+300 verbose rebuildBundles   'cookie',
+300 verbose rebuildBundles   'cookie-signature',
+300 verbose rebuildBundles   'core-util-is',
+300 verbose rebuildBundles   'debug',
+300 verbose rebuildBundles   'depd',
+300 verbose rebuildBundles   'destroy',
+300 verbose rebuildBundles   'each-series',
+300 verbose rebuildBundles   'ee-first',
+300 verbose rebuildBundles   'encodeurl',
+300 verbose rebuildBundles   'es6-promise',
+300 verbose rebuildBundles   'escape-html',
+300 verbose rebuildBundles   'etag',
+300 verbose rebuildBundles   'express',
+300 verbose rebuildBundles   'finalhandler',
+300 verbose rebuildBundles   'forwarded',
+300 verbose rebuildBundles   'fresh',
+300 verbose rebuildBundles   'http-errors',
+300 verbose rebuildBundles   'iconv-lite',
+300 verbose rebuildBundles   'inherits',
+300 verbose rebuildBundles   'ipaddr.js',
+300 verbose rebuildBundles   'isarray',
+300 verbose rebuildBundles   'media-typer',
+300 verbose rebuildBundles   'merge-descriptors',
+300 verbose rebuildBundles   'methods',
+300 verbose rebuildBundles   'mime',
+300 verbose rebuildBundles   'mime-db',
+300 verbose rebuildBundles   'mime-types',
+300 verbose rebuildBundles   'mongodb',
+300 verbose rebuildBundles   'mongodb-core',
+300 verbose rebuildBundles   'mongojs',
+300 verbose rebuildBundles   'morgan',
+300 verbose rebuildBundles   'ms',
+300 verbose rebuildBundles   'negotiator',
+300 verbose rebuildBundles   'on-finished',
+300 verbose rebuildBundles   'on-headers',
+300 verbose rebuildBundles   'once',
+300 verbose rebuildBundles   'parse-mongo-url',
+300 verbose rebuildBundles   'parseurl',
+300 verbose rebuildBundles   'path-to-regexp',
+300 verbose rebuildBundles   'process-nextick-args',
+300 verbose rebuildBundles   'proxy-addr',
+300 verbose rebuildBundles   'qs',
+300 verbose rebuildBundles   'range-parser',
+300 verbose rebuildBundles   'raw-body',
+300 verbose rebuildBundles   'readable-stream',
+300 verbose rebuildBundles   'require_optional',
+300 verbose rebuildBundles   'resolve-from',
+300 verbose rebuildBundles   'safe-buffer',
+300 verbose rebuildBundles   'semver',
+300 verbose rebuildBundles   'send',
+300 verbose rebuildBundles   'serve-static',
+300 verbose rebuildBundles   'setprototypeof',
+300 verbose rebuildBundles   'statuses',
+300 verbose rebuildBundles   'string_decoder',
+300 verbose rebuildBundles   'thunky',
+300 verbose rebuildBundles   'to-mongodb-core',
+300 verbose rebuildBundles   'type-is',
+300 verbose rebuildBundles   'unpipe',
+300 verbose rebuildBundles   'util-deprecate',
+300 verbose rebuildBundles   'utils-merge',
+300 verbose rebuildBundles   'vary',
+300 verbose rebuildBundles   'wrappy',
+300 verbose rebuildBundles   'xtend' ]
+301 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/accepts
+302 info build /home/nikhil/workplace/angular_one_demo/node_modules/accepts
+303 info lifecycle accepts@1.3.4~preinstall: accepts@1.3.4
+304 silly lifecycle accepts@1.3.4~preinstall: no script for preinstall, continuing
+305 info linkStuff accepts@1.3.4
+306 silly linkStuff accepts@1.3.4 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+307 verbose linkBins accepts@1.3.4
+308 verbose linkMans accepts@1.3.4
+309 verbose rebuildBundles accepts@1.3.4
+310 info lifecycle accepts@1.3.4~install: accepts@1.3.4
+311 silly lifecycle accepts@1.3.4~install: no script for install, continuing
+312 info lifecycle accepts@1.3.4~postinstall: accepts@1.3.4
+313 silly lifecycle accepts@1.3.4~postinstall: no script for postinstall, continuing
+314 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/angular
+315 info build /home/nikhil/workplace/angular_one_demo/node_modules/angular
+316 info lifecycle angular@1.6.6~preinstall: angular@1.6.6
+317 silly lifecycle angular@1.6.6~preinstall: no script for preinstall, continuing
+318 info linkStuff angular@1.6.6
+319 silly linkStuff angular@1.6.6 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+320 verbose linkBins angular@1.6.6
+321 verbose linkMans angular@1.6.6
+322 verbose rebuildBundles angular@1.6.6
+323 info lifecycle angular@1.6.6~install: angular@1.6.6
+324 silly lifecycle angular@1.6.6~install: no script for install, continuing
+325 info lifecycle angular@1.6.6~postinstall: angular@1.6.6
+326 silly lifecycle angular@1.6.6~postinstall: no script for postinstall, continuing
+327 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/angular-route
+328 info build /home/nikhil/workplace/angular_one_demo/node_modules/angular-route
+329 info lifecycle angular-route@1.6.8~preinstall: angular-route@1.6.8
+330 silly lifecycle angular-route@1.6.8~preinstall: no script for preinstall, continuing
+331 info linkStuff angular-route@1.6.8
+332 silly linkStuff angular-route@1.6.8 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+333 verbose linkBins angular-route@1.6.8
+334 verbose linkMans angular-route@1.6.8
+335 verbose rebuildBundles angular-route@1.6.8
+336 info lifecycle angular-route@1.6.8~install: angular-route@1.6.8
+337 silly lifecycle angular-route@1.6.8~install: no script for install, continuing
+338 info lifecycle angular-route@1.6.8~postinstall: angular-route@1.6.8
+339 silly lifecycle angular-route@1.6.8~postinstall: no script for postinstall, continuing
+340 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/array-flatten
+341 info build /home/nikhil/workplace/angular_one_demo/node_modules/array-flatten
+342 info lifecycle array-flatten@1.1.1~preinstall: array-flatten@1.1.1
+343 silly lifecycle array-flatten@1.1.1~preinstall: no script for preinstall, continuing
+344 info linkStuff array-flatten@1.1.1
+345 silly linkStuff array-flatten@1.1.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+346 verbose linkBins array-flatten@1.1.1
+347 verbose linkMans array-flatten@1.1.1
+348 verbose rebuildBundles array-flatten@1.1.1
+349 info lifecycle array-flatten@1.1.1~install: array-flatten@1.1.1
+350 silly lifecycle array-flatten@1.1.1~install: no script for install, continuing
+351 info lifecycle array-flatten@1.1.1~postinstall: array-flatten@1.1.1
+352 silly lifecycle array-flatten@1.1.1~postinstall: no script for postinstall, continuing
+353 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/basic-auth
+354 info build /home/nikhil/workplace/angular_one_demo/node_modules/basic-auth
+355 info lifecycle basic-auth@2.0.0~preinstall: basic-auth@2.0.0
+356 silly lifecycle basic-auth@2.0.0~preinstall: no script for preinstall, continuing
+357 info linkStuff basic-auth@2.0.0
+358 silly linkStuff basic-auth@2.0.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+359 verbose linkBins basic-auth@2.0.0
+360 verbose linkMans basic-auth@2.0.0
+361 verbose rebuildBundles basic-auth@2.0.0
+362 info lifecycle basic-auth@2.0.0~install: basic-auth@2.0.0
+363 silly lifecycle basic-auth@2.0.0~install: no script for install, continuing
+364 info lifecycle basic-auth@2.0.0~postinstall: basic-auth@2.0.0
+365 silly lifecycle basic-auth@2.0.0~postinstall: no script for postinstall, continuing
+366 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/bson
+367 info build /home/nikhil/workplace/angular_one_demo/node_modules/bson
+368 info lifecycle bson@1.0.4~preinstall: bson@1.0.4
+369 silly lifecycle bson@1.0.4~preinstall: no script for preinstall, continuing
+370 info linkStuff bson@1.0.4
+371 silly linkStuff bson@1.0.4 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+372 verbose linkBins bson@1.0.4
+373 verbose linkMans bson@1.0.4
+374 verbose rebuildBundles bson@1.0.4
+375 info lifecycle bson@1.0.4~install: bson@1.0.4
+376 silly lifecycle bson@1.0.4~install: no script for install, continuing
+377 info lifecycle bson@1.0.4~postinstall: bson@1.0.4
+378 silly lifecycle bson@1.0.4~postinstall: no script for postinstall, continuing
+379 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/buffer-shims
+380 info build /home/nikhil/workplace/angular_one_demo/node_modules/buffer-shims
+381 info lifecycle buffer-shims@1.0.0~preinstall: buffer-shims@1.0.0
+382 silly lifecycle buffer-shims@1.0.0~preinstall: no script for preinstall, continuing
+383 info linkStuff buffer-shims@1.0.0
+384 silly linkStuff buffer-shims@1.0.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+385 verbose linkBins buffer-shims@1.0.0
+386 verbose linkMans buffer-shims@1.0.0
+387 verbose rebuildBundles buffer-shims@1.0.0
+388 info lifecycle buffer-shims@1.0.0~install: buffer-shims@1.0.0
+389 silly lifecycle buffer-shims@1.0.0~install: no script for install, continuing
+390 info lifecycle buffer-shims@1.0.0~postinstall: buffer-shims@1.0.0
+391 silly lifecycle buffer-shims@1.0.0~postinstall: no script for postinstall, continuing
+392 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/bytes
+393 info build /home/nikhil/workplace/angular_one_demo/node_modules/bytes
+394 info lifecycle bytes@3.0.0~preinstall: bytes@3.0.0
+395 silly lifecycle bytes@3.0.0~preinstall: no script for preinstall, continuing
+396 info linkStuff bytes@3.0.0
+397 silly linkStuff bytes@3.0.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+398 verbose linkBins bytes@3.0.0
+399 verbose linkMans bytes@3.0.0
+400 verbose rebuildBundles bytes@3.0.0
+401 info lifecycle bytes@3.0.0~install: bytes@3.0.0
+402 silly lifecycle bytes@3.0.0~install: no script for install, continuing
+403 info lifecycle bytes@3.0.0~postinstall: bytes@3.0.0
+404 silly lifecycle bytes@3.0.0~postinstall: no script for postinstall, continuing
+405 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/content-disposition
+406 info build /home/nikhil/workplace/angular_one_demo/node_modules/content-disposition
+407 info lifecycle content-disposition@0.5.2~preinstall: content-disposition@0.5.2
+408 silly lifecycle content-disposition@0.5.2~preinstall: no script for preinstall, continuing
+409 info linkStuff content-disposition@0.5.2
+410 silly linkStuff content-disposition@0.5.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+411 verbose linkBins content-disposition@0.5.2
+412 verbose linkMans content-disposition@0.5.2
+413 verbose rebuildBundles content-disposition@0.5.2
+414 info lifecycle content-disposition@0.5.2~install: content-disposition@0.5.2
+415 silly lifecycle content-disposition@0.5.2~install: no script for install, continuing
+416 info lifecycle content-disposition@0.5.2~postinstall: content-disposition@0.5.2
+417 silly lifecycle content-disposition@0.5.2~postinstall: no script for postinstall, continuing
+418 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/content-type
+419 info build /home/nikhil/workplace/angular_one_demo/node_modules/content-type
+420 info lifecycle content-type@1.0.4~preinstall: content-type@1.0.4
+421 silly lifecycle content-type@1.0.4~preinstall: no script for preinstall, continuing
+422 info linkStuff content-type@1.0.4
+423 silly linkStuff content-type@1.0.4 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+424 verbose linkBins content-type@1.0.4
+425 verbose linkMans content-type@1.0.4
+426 verbose rebuildBundles content-type@1.0.4
+427 info lifecycle content-type@1.0.4~install: content-type@1.0.4
+428 silly lifecycle content-type@1.0.4~install: no script for install, continuing
+429 info lifecycle content-type@1.0.4~postinstall: content-type@1.0.4
+430 silly lifecycle content-type@1.0.4~postinstall: no script for postinstall, continuing
+431 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/cookie
+432 info build /home/nikhil/workplace/angular_one_demo/node_modules/cookie
+433 info lifecycle cookie@0.3.1~preinstall: cookie@0.3.1
+434 silly lifecycle cookie@0.3.1~preinstall: no script for preinstall, continuing
+435 info linkStuff cookie@0.3.1
+436 silly linkStuff cookie@0.3.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+437 verbose linkBins cookie@0.3.1
+438 verbose linkMans cookie@0.3.1
+439 verbose rebuildBundles cookie@0.3.1
+440 info lifecycle cookie@0.3.1~install: cookie@0.3.1
+441 silly lifecycle cookie@0.3.1~install: no script for install, continuing
+442 info lifecycle cookie@0.3.1~postinstall: cookie@0.3.1
+443 silly lifecycle cookie@0.3.1~postinstall: no script for postinstall, continuing
+444 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/cookie-signature
+445 info build /home/nikhil/workplace/angular_one_demo/node_modules/cookie-signature
+446 info lifecycle cookie-signature@1.0.6~preinstall: cookie-signature@1.0.6
+447 silly lifecycle cookie-signature@1.0.6~preinstall: no script for preinstall, continuing
+448 info linkStuff cookie-signature@1.0.6
+449 silly linkStuff cookie-signature@1.0.6 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+450 verbose linkBins cookie-signature@1.0.6
+451 verbose linkMans cookie-signature@1.0.6
+452 verbose rebuildBundles cookie-signature@1.0.6
+453 info lifecycle cookie-signature@1.0.6~install: cookie-signature@1.0.6
+454 silly lifecycle cookie-signature@1.0.6~install: no script for install, continuing
+455 info lifecycle cookie-signature@1.0.6~postinstall: cookie-signature@1.0.6
+456 silly lifecycle cookie-signature@1.0.6~postinstall: no script for postinstall, continuing
+457 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/core-util-is
+458 info build /home/nikhil/workplace/angular_one_demo/node_modules/core-util-is
+459 info lifecycle core-util-is@1.0.2~preinstall: core-util-is@1.0.2
+460 silly lifecycle core-util-is@1.0.2~preinstall: no script for preinstall, continuing
+461 info linkStuff core-util-is@1.0.2
+462 silly linkStuff core-util-is@1.0.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+463 verbose linkBins core-util-is@1.0.2
+464 verbose linkMans core-util-is@1.0.2
+465 verbose rebuildBundles core-util-is@1.0.2
+466 info lifecycle core-util-is@1.0.2~install: core-util-is@1.0.2
+467 silly lifecycle core-util-is@1.0.2~install: no script for install, continuing
+468 info lifecycle core-util-is@1.0.2~postinstall: core-util-is@1.0.2
+469 silly lifecycle core-util-is@1.0.2~postinstall: no script for postinstall, continuing
+470 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/debug
+471 info build /home/nikhil/workplace/angular_one_demo/node_modules/debug
+472 info lifecycle debug@2.6.9~preinstall: debug@2.6.9
+473 silly lifecycle debug@2.6.9~preinstall: no script for preinstall, continuing
+474 info linkStuff debug@2.6.9
+475 silly linkStuff debug@2.6.9 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+476 verbose linkBins debug@2.6.9
+477 verbose linkMans debug@2.6.9
+478 verbose rebuildBundles debug@2.6.9
+479 info lifecycle debug@2.6.9~install: debug@2.6.9
+480 silly lifecycle debug@2.6.9~install: no script for install, continuing
+481 info lifecycle debug@2.6.9~postinstall: debug@2.6.9
+482 silly lifecycle debug@2.6.9~postinstall: no script for postinstall, continuing
+483 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/depd
+484 info build /home/nikhil/workplace/angular_one_demo/node_modules/depd
+485 info lifecycle depd@1.1.1~preinstall: depd@1.1.1
+486 silly lifecycle depd@1.1.1~preinstall: no script for preinstall, continuing
+487 info linkStuff depd@1.1.1
+488 silly linkStuff depd@1.1.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+489 verbose linkBins depd@1.1.1
+490 verbose linkMans depd@1.1.1
+491 verbose rebuildBundles depd@1.1.1
+492 info lifecycle depd@1.1.1~install: depd@1.1.1
+493 silly lifecycle depd@1.1.1~install: no script for install, continuing
+494 info lifecycle depd@1.1.1~postinstall: depd@1.1.1
+495 silly lifecycle depd@1.1.1~postinstall: no script for postinstall, continuing
+496 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/destroy
+497 info build /home/nikhil/workplace/angular_one_demo/node_modules/destroy
+498 info lifecycle destroy@1.0.4~preinstall: destroy@1.0.4
+499 silly lifecycle destroy@1.0.4~preinstall: no script for preinstall, continuing
+500 info linkStuff destroy@1.0.4
+501 silly linkStuff destroy@1.0.4 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+502 verbose linkBins destroy@1.0.4
+503 verbose linkMans destroy@1.0.4
+504 verbose rebuildBundles destroy@1.0.4
+505 info lifecycle destroy@1.0.4~install: destroy@1.0.4
+506 silly lifecycle destroy@1.0.4~install: no script for install, continuing
+507 info lifecycle destroy@1.0.4~postinstall: destroy@1.0.4
+508 silly lifecycle destroy@1.0.4~postinstall: no script for postinstall, continuing
+509 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/each-series
+510 info build /home/nikhil/workplace/angular_one_demo/node_modules/each-series
+511 info lifecycle each-series@1.0.0~preinstall: each-series@1.0.0
+512 silly lifecycle each-series@1.0.0~preinstall: no script for preinstall, continuing
+513 info linkStuff each-series@1.0.0
+514 silly linkStuff each-series@1.0.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+515 verbose linkBins each-series@1.0.0
+516 verbose linkMans each-series@1.0.0
+517 verbose rebuildBundles each-series@1.0.0
+518 info lifecycle each-series@1.0.0~install: each-series@1.0.0
+519 silly lifecycle each-series@1.0.0~install: no script for install, continuing
+520 info lifecycle each-series@1.0.0~postinstall: each-series@1.0.0
+521 silly lifecycle each-series@1.0.0~postinstall: no script for postinstall, continuing
+522 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/ee-first
+523 info build /home/nikhil/workplace/angular_one_demo/node_modules/ee-first
+524 info lifecycle ee-first@1.1.1~preinstall: ee-first@1.1.1
+525 silly lifecycle ee-first@1.1.1~preinstall: no script for preinstall, continuing
+526 info linkStuff ee-first@1.1.1
+527 silly linkStuff ee-first@1.1.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+528 verbose linkBins ee-first@1.1.1
+529 verbose linkMans ee-first@1.1.1
+530 verbose rebuildBundles ee-first@1.1.1
+531 info lifecycle ee-first@1.1.1~install: ee-first@1.1.1
+532 silly lifecycle ee-first@1.1.1~install: no script for install, continuing
+533 info lifecycle ee-first@1.1.1~postinstall: ee-first@1.1.1
+534 silly lifecycle ee-first@1.1.1~postinstall: no script for postinstall, continuing
+535 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/encodeurl
+536 info build /home/nikhil/workplace/angular_one_demo/node_modules/encodeurl
+537 info lifecycle encodeurl@1.0.1~preinstall: encodeurl@1.0.1
+538 silly lifecycle encodeurl@1.0.1~preinstall: no script for preinstall, continuing
+539 info linkStuff encodeurl@1.0.1
+540 silly linkStuff encodeurl@1.0.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+541 verbose linkBins encodeurl@1.0.1
+542 verbose linkMans encodeurl@1.0.1
+543 verbose rebuildBundles encodeurl@1.0.1
+544 info lifecycle encodeurl@1.0.1~install: encodeurl@1.0.1
+545 silly lifecycle encodeurl@1.0.1~install: no script for install, continuing
+546 info lifecycle encodeurl@1.0.1~postinstall: encodeurl@1.0.1
+547 silly lifecycle encodeurl@1.0.1~postinstall: no script for postinstall, continuing
+548 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/es6-promise
+549 info build /home/nikhil/workplace/angular_one_demo/node_modules/es6-promise
+550 info lifecycle es6-promise@3.2.1~preinstall: es6-promise@3.2.1
+551 silly lifecycle es6-promise@3.2.1~preinstall: no script for preinstall, continuing
+552 info linkStuff es6-promise@3.2.1
+553 silly linkStuff es6-promise@3.2.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+554 verbose linkBins es6-promise@3.2.1
+555 verbose linkMans es6-promise@3.2.1
+556 verbose rebuildBundles es6-promise@3.2.1
+557 info lifecycle es6-promise@3.2.1~install: es6-promise@3.2.1
+558 silly lifecycle es6-promise@3.2.1~install: no script for install, continuing
+559 info lifecycle es6-promise@3.2.1~postinstall: es6-promise@3.2.1
+560 silly lifecycle es6-promise@3.2.1~postinstall: no script for postinstall, continuing
+561 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/escape-html
+562 info build /home/nikhil/workplace/angular_one_demo/node_modules/escape-html
+563 info lifecycle escape-html@1.0.3~preinstall: escape-html@1.0.3
+564 silly lifecycle escape-html@1.0.3~preinstall: no script for preinstall, continuing
+565 info linkStuff escape-html@1.0.3
+566 silly linkStuff escape-html@1.0.3 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+567 verbose linkBins escape-html@1.0.3
+568 verbose linkMans escape-html@1.0.3
+569 verbose rebuildBundles escape-html@1.0.3
+570 info lifecycle escape-html@1.0.3~install: escape-html@1.0.3
+571 silly lifecycle escape-html@1.0.3~install: no script for install, continuing
+572 info lifecycle escape-html@1.0.3~postinstall: escape-html@1.0.3
+573 silly lifecycle escape-html@1.0.3~postinstall: no script for postinstall, continuing
+574 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/etag
+575 info build /home/nikhil/workplace/angular_one_demo/node_modules/etag
+576 info lifecycle etag@1.8.1~preinstall: etag@1.8.1
+577 silly lifecycle etag@1.8.1~preinstall: no script for preinstall, continuing
+578 info linkStuff etag@1.8.1
+579 silly linkStuff etag@1.8.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+580 verbose linkBins etag@1.8.1
+581 verbose linkMans etag@1.8.1
+582 verbose rebuildBundles etag@1.8.1
+583 info lifecycle etag@1.8.1~install: etag@1.8.1
+584 silly lifecycle etag@1.8.1~install: no script for install, continuing
+585 info lifecycle etag@1.8.1~postinstall: etag@1.8.1
+586 silly lifecycle etag@1.8.1~postinstall: no script for postinstall, continuing
+587 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/finalhandler
+588 info build /home/nikhil/workplace/angular_one_demo/node_modules/finalhandler
+589 info lifecycle finalhandler@1.1.0~preinstall: finalhandler@1.1.0
+590 silly lifecycle finalhandler@1.1.0~preinstall: no script for preinstall, continuing
+591 info linkStuff finalhandler@1.1.0
+592 silly linkStuff finalhandler@1.1.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+593 verbose linkBins finalhandler@1.1.0
+594 verbose linkMans finalhandler@1.1.0
+595 verbose rebuildBundles finalhandler@1.1.0
+596 info lifecycle finalhandler@1.1.0~install: finalhandler@1.1.0
+597 silly lifecycle finalhandler@1.1.0~install: no script for install, continuing
+598 info lifecycle finalhandler@1.1.0~postinstall: finalhandler@1.1.0
+599 silly lifecycle finalhandler@1.1.0~postinstall: no script for postinstall, continuing
+600 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/forwarded
+601 info build /home/nikhil/workplace/angular_one_demo/node_modules/forwarded
+602 info lifecycle forwarded@0.1.2~preinstall: forwarded@0.1.2
+603 silly lifecycle forwarded@0.1.2~preinstall: no script for preinstall, continuing
+604 info linkStuff forwarded@0.1.2
+605 silly linkStuff forwarded@0.1.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+606 verbose linkBins forwarded@0.1.2
+607 verbose linkMans forwarded@0.1.2
+608 verbose rebuildBundles forwarded@0.1.2
+609 info lifecycle forwarded@0.1.2~install: forwarded@0.1.2
+610 silly lifecycle forwarded@0.1.2~install: no script for install, continuing
+611 info lifecycle forwarded@0.1.2~postinstall: forwarded@0.1.2
+612 silly lifecycle forwarded@0.1.2~postinstall: no script for postinstall, continuing
+613 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/fresh
+614 info build /home/nikhil/workplace/angular_one_demo/node_modules/fresh
+615 info lifecycle fresh@0.5.2~preinstall: fresh@0.5.2
+616 silly lifecycle fresh@0.5.2~preinstall: no script for preinstall, continuing
+617 info linkStuff fresh@0.5.2
+618 silly linkStuff fresh@0.5.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+619 verbose linkBins fresh@0.5.2
+620 verbose linkMans fresh@0.5.2
+621 verbose rebuildBundles fresh@0.5.2
+622 info lifecycle fresh@0.5.2~install: fresh@0.5.2
+623 silly lifecycle fresh@0.5.2~install: no script for install, continuing
+624 info lifecycle fresh@0.5.2~postinstall: fresh@0.5.2
+625 silly lifecycle fresh@0.5.2~postinstall: no script for postinstall, continuing
+626 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/http-errors
+627 info build /home/nikhil/workplace/angular_one_demo/node_modules/http-errors
+628 info lifecycle http-errors@1.6.2~preinstall: http-errors@1.6.2
+629 silly lifecycle http-errors@1.6.2~preinstall: no script for preinstall, continuing
+630 info linkStuff http-errors@1.6.2
+631 silly linkStuff http-errors@1.6.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+632 verbose linkBins http-errors@1.6.2
+633 verbose linkMans http-errors@1.6.2
+634 verbose rebuildBundles http-errors@1.6.2
+635 verbose rebuildBundles [ 'setprototypeof' ]
+636 info lifecycle http-errors@1.6.2~install: http-errors@1.6.2
+637 silly lifecycle http-errors@1.6.2~install: no script for install, continuing
+638 info lifecycle http-errors@1.6.2~postinstall: http-errors@1.6.2
+639 silly lifecycle http-errors@1.6.2~postinstall: no script for postinstall, continuing
+640 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/iconv-lite
+641 info build /home/nikhil/workplace/angular_one_demo/node_modules/iconv-lite
+642 info lifecycle iconv-lite@0.4.19~preinstall: iconv-lite@0.4.19
+643 silly lifecycle iconv-lite@0.4.19~preinstall: no script for preinstall, continuing
+644 info linkStuff iconv-lite@0.4.19
+645 silly linkStuff iconv-lite@0.4.19 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+646 verbose linkBins iconv-lite@0.4.19
+647 verbose linkMans iconv-lite@0.4.19
+648 verbose rebuildBundles iconv-lite@0.4.19
+649 info lifecycle iconv-lite@0.4.19~install: iconv-lite@0.4.19
+650 silly lifecycle iconv-lite@0.4.19~install: no script for install, continuing
+651 info lifecycle iconv-lite@0.4.19~postinstall: iconv-lite@0.4.19
+652 silly lifecycle iconv-lite@0.4.19~postinstall: no script for postinstall, continuing
+653 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/inherits
+654 info build /home/nikhil/workplace/angular_one_demo/node_modules/inherits
+655 info lifecycle inherits@2.0.3~preinstall: inherits@2.0.3
+656 silly lifecycle inherits@2.0.3~preinstall: no script for preinstall, continuing
+657 info linkStuff inherits@2.0.3
+658 silly linkStuff inherits@2.0.3 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+659 verbose linkBins inherits@2.0.3
+660 verbose linkMans inherits@2.0.3
+661 verbose rebuildBundles inherits@2.0.3
+662 info lifecycle inherits@2.0.3~install: inherits@2.0.3
+663 silly lifecycle inherits@2.0.3~install: no script for install, continuing
+664 info lifecycle inherits@2.0.3~postinstall: inherits@2.0.3
+665 silly lifecycle inherits@2.0.3~postinstall: no script for postinstall, continuing
+666 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/ipaddr.js
+667 info build /home/nikhil/workplace/angular_one_demo/node_modules/ipaddr.js
+668 info lifecycle ipaddr.js@1.5.2~preinstall: ipaddr.js@1.5.2
+669 silly lifecycle ipaddr.js@1.5.2~preinstall: no script for preinstall, continuing
+670 info linkStuff ipaddr.js@1.5.2
+671 silly linkStuff ipaddr.js@1.5.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+672 verbose linkBins ipaddr.js@1.5.2
+673 verbose linkMans ipaddr.js@1.5.2
+674 verbose rebuildBundles ipaddr.js@1.5.2
+675 info lifecycle ipaddr.js@1.5.2~install: ipaddr.js@1.5.2
+676 silly lifecycle ipaddr.js@1.5.2~install: no script for install, continuing
+677 info lifecycle ipaddr.js@1.5.2~postinstall: ipaddr.js@1.5.2
+678 silly lifecycle ipaddr.js@1.5.2~postinstall: no script for postinstall, continuing
+679 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/isarray
+680 info build /home/nikhil/workplace/angular_one_demo/node_modules/isarray
+681 info lifecycle isarray@1.0.0~preinstall: isarray@1.0.0
+682 silly lifecycle isarray@1.0.0~preinstall: no script for preinstall, continuing
+683 info linkStuff isarray@1.0.0
+684 silly linkStuff isarray@1.0.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+685 verbose linkBins isarray@1.0.0
+686 verbose linkMans isarray@1.0.0
+687 verbose rebuildBundles isarray@1.0.0
+688 info lifecycle isarray@1.0.0~install: isarray@1.0.0
+689 silly lifecycle isarray@1.0.0~install: no script for install, continuing
+690 info lifecycle isarray@1.0.0~postinstall: isarray@1.0.0
+691 silly lifecycle isarray@1.0.0~postinstall: no script for postinstall, continuing
+692 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/media-typer
+693 info build /home/nikhil/workplace/angular_one_demo/node_modules/media-typer
+694 info lifecycle media-typer@0.3.0~preinstall: media-typer@0.3.0
+695 silly lifecycle media-typer@0.3.0~preinstall: no script for preinstall, continuing
+696 info linkStuff media-typer@0.3.0
+697 silly linkStuff media-typer@0.3.0 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+698 verbose linkBins media-typer@0.3.0
+699 verbose linkMans media-typer@0.3.0
+700 verbose rebuildBundles media-typer@0.3.0
+701 info lifecycle media-typer@0.3.0~install: media-typer@0.3.0
+702 silly lifecycle media-typer@0.3.0~install: no script for install, continuing
+703 info lifecycle media-typer@0.3.0~postinstall: media-typer@0.3.0
+704 silly lifecycle media-typer@0.3.0~postinstall: no script for postinstall, continuing
+705 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/merge-descriptors
+706 info build /home/nikhil/workplace/angular_one_demo/node_modules/merge-descriptors
+707 info lifecycle merge-descriptors@1.0.1~preinstall: merge-descriptors@1.0.1
+708 silly lifecycle merge-descriptors@1.0.1~preinstall: no script for preinstall, continuing
+709 info linkStuff merge-descriptors@1.0.1
+710 silly linkStuff merge-descriptors@1.0.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+711 verbose linkBins merge-descriptors@1.0.1
+712 verbose linkMans merge-descriptors@1.0.1
+713 verbose rebuildBundles merge-descriptors@1.0.1
+714 info lifecycle merge-descriptors@1.0.1~install: merge-descriptors@1.0.1
+715 silly lifecycle merge-descriptors@1.0.1~install: no script for install, continuing
+716 info lifecycle merge-descriptors@1.0.1~postinstall: merge-descriptors@1.0.1
+717 silly lifecycle merge-descriptors@1.0.1~postinstall: no script for postinstall, continuing
+718 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/methods
+719 info build /home/nikhil/workplace/angular_one_demo/node_modules/methods
+720 info lifecycle methods@1.1.2~preinstall: methods@1.1.2
+721 silly lifecycle methods@1.1.2~preinstall: no script for preinstall, continuing
+722 info linkStuff methods@1.1.2
+723 silly linkStuff methods@1.1.2 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+724 verbose linkBins methods@1.1.2
+725 verbose linkMans methods@1.1.2
+726 verbose rebuildBundles methods@1.1.2
+727 info lifecycle methods@1.1.2~install: methods@1.1.2
+728 silly lifecycle methods@1.1.2~install: no script for install, continuing
+729 info lifecycle methods@1.1.2~postinstall: methods@1.1.2
+730 silly lifecycle methods@1.1.2~postinstall: no script for postinstall, continuing
+731 verbose rebuild bundle /home/nikhil/workplace/angular_one_demo/node_modules/mime
+732 info build /home/nikhil/workplace/angular_one_demo/node_modules/mime
+733 info lifecycle mime@1.4.1~preinstall: mime@1.4.1
+734 silly lifecycle mime@1.4.1~preinstall: no script for preinstall, continuing
+735 info linkStuff mime@1.4.1
+736 silly linkStuff mime@1.4.1 has /home/nikhil/workplace/angular_one_demo/node_modules as its parent node_modules
+737 verbose linkBins mime@1.4.1
+738 verbose link bins [ { mime: 'cli.js' },
+738 verbose link bins   '/home/nikhil/workplace/angular_one_demo/node_modules/.bin',
+738 verbose link bins   false ]
+739 verbose linkMans mime@1.4.1
+740 verbose rebuildBundles mime@1.4.1
+741 warn EPACKAGEJSON angular1_demo@1.0.0 No description
+742 warn EPACKAGEJSON angular1_demo@1.0.0 No repository field.
+743 verbose stack Error: EPERM: operation not permitted, chmod '/home/nikhil/workplace/angular_one_demo/node_modules/mime/cli.js'
+743 verbose stack     at Error (native)
+744 verbose cwd /home/nikhil/workplace/angular_one_demo
+745 error Linux 4.4.0-104-generic
+746 error argv "/home/nikhil/.nvm/versions/node/v5.0.0/bin/node" "/home/nikhil/.nvm/versions/node/v5.0.0/bin/npm" "install"
+747 error node v5.0.0
+748 error npm  v3.3.6
+749 error path /home/nikhil/workplace/angular_one_demo/node_modules/mime/cli.js
+750 error code EPERM
+751 error errno -1
+752 error syscall chmod
+753 error Error: EPERM: operation not permitted, chmod '/home/nikhil/workplace/angular_one_demo/node_modules/mime/cli.js'
+753 error     at Error (native)
+753 error  { [Error: EPERM: operation not permitted, chmod '/home/nikhil/workplace/angular_one_demo/node_modules/mime/cli.js']
+753 error   errno: -1,
+753 error   code: 'EPERM',
+753 error   syscall: 'chmod',
+753 error   path: '/home/nikhil/workplace/angular_one_demo/node_modules/mime/cli.js' }
+754 error Please try running this command again as root/Administrator.
+755 verbose exit [ -1, true ]

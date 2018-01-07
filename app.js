@@ -1,57 +1,30 @@
-// MEAN Stack RESTful API Tutorial - Contact List App
-
 var express = require('express');
 var app = express();
-var mongojs = require('mongojs');
-var db = mongojs('contactlist', ['contactlist']);
+var port = process.env.PORT || 8000;
+var morgan = require('morgan');
+var mongoose = require('mongoose');
+var router = express.Router();
 var bodyParser = require('body-parser');
+var appRoutes = require('./app/routes/api')(router);
+var path = require('path');
 
-app.use(express.static(__dirname + '/public'));
+app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static(__dirname + '/public'));
+app.use('/api',appRoutes);
 
-app.get('/contactlist', function (req, res) {
-  console.log('I received a GET request');
-
-  db.contactlist.find(function (err, docs) {
-    console.log(docs);
-    res.json(docs);
-  });
+mongoose.connect('mongodb://localhost:27017/meanapp',  function(err) {
+  if(err)
+    console.log('Not connected to mongodb');
+  else
+    console.log('connected to mongo database');
 });
 
-app.post('/contactlist', function (req, res) {
-  console.log(req.body);
-  db.contactlist.insert(req.body, function(err, doc) {
-    res.json(doc);
-  });
-});
+app.get('*', function(req,res){
+  res.sendFile(path.join(__dirname + '/public/app/views/index.html'))
+})
 
-app.delete('/contactlist/:id', function (req, res) {
-  var id = req.params.id;
-  console.log(id);
-  db.contactlist.remove({_id: mongojs.ObjectId(id)}, function (err, doc) {
-    res.json(doc);
-  });
+app.listen(port, function (){
+  console.log("Running The Server on port" + port)
 });
-
-app.get('/contactlist/:id', function (req, res) {
-  var id = req.params.id;
-  console.log(id);
-  db.contactlist.findOne({_id: mongojs.ObjectId(id)}, function (err, doc) {
-    res.json(doc);
-  });
-});
-
-app.put('/contactlist/:id', function (req, res) {
-  var id = req.params.id;
-  console.log(req.body.name);
-  db.contactlist.findAndModify({
-    query: {_id: mongojs.ObjectId(id)},
-    update: {$set: {name: req.body.name, email: req.body.email, number: req.body.number}},
-    new: true}, function (err, doc) {
-      res.json(doc);
-    }
-  );
-});
-
-app.listen(3000);
-console.log("Server running on port 3000");
