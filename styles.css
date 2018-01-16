@@ -1,19 +1,7 @@
-
-body {
+div {
+    width: 400px;
+    border: 1px solid black;
     font-family: Arial;
-}
-
-table {
-    border-collapse: collapse;
-}
-
-td {
-    border: 1px solid black;
+    font-size: large;
     padding: 5px;
-}
-
-th {
-    border: 1px solid black;
-    padding: 5px;
-    text-align: left;
 }
