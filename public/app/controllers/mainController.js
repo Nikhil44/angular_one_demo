@@ -7,11 +7,9 @@ angular.module('mainController', ['authServices'])
 	$rootScope.$on('$routeChangeStart', function () {
 
 		if (Auth.isloggedIn()) {
-			
 			app.isloggedIn = true;
 			app.loadme = true;
 			console.log(app.isloggedIn);
-			console.log('Success: user is logged in');
 			Auth.getUser().then(function(data) {
 				app.username = data.data.username;
 				app.email = app.email;
@@ -23,7 +21,18 @@ angular.module('mainController', ['authServices'])
 			console.log('Failure: User is not Logged in');
 			app.username = false;
 		}	
+
+
+		if ($location.hash() == '_=_') $location.hash(null); // Check if facebook hash is added to URL
+
 	});
+
+
+	this.facebook = function () {
+		app.disabled = true;
+		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/facebook';
+	};
+
 	
   this.doLogin = function(loginData) 
   {

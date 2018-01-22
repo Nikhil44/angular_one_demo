@@ -21,6 +21,19 @@ angular.module('appRoutes', ['ngRoute'])
     .when('/profile', {
             templateUrl: 'app/views/pages/users/profile.html'
     })
+    .when('/facebook/:token', {
+            templateUrl: 'app/views/pages/users/social/social.html',
+            controller: 'facebookCtrl',
+            controllerAs: 'facebook',
+            authenticated: false
+        })
+    .when('/facebookerror', {
+            templateUrl: 'app/views/pages/users/login.html',
+            controller: 'facebookCtrl',
+            controllerAs: 'facebook',
+            authenticated: false
+        })
+        
     .otherwise({ redirectTo: '/' }); // If user tries to access any other route, redirect to home page
     $locationProvider.html5Mode({ enabled: true, requireBase: false }); // Required to remove AngularJS hash from URL (no base is required in index file)
 });

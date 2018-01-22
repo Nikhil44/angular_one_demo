@@ -6,6 +6,7 @@
 			  <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" ng-model = "main.loginData.username" />
 			  <input type="password" class="form-control" name="Password" placeholder="Password" required="" ng-model = "main.loginData.password" />
 			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
+			  <button ng-click ="main.facebook();" target="_blank" class="btn btn-lg btn-success btn-block">facebook </button>
 		</form>
 	</div>
 </div>
@@ -21,4 +22,12 @@
 
 <div class="alert alert-success" ng-show="main.sucessMsg">
 		<strong>Success! </strong>{{main.sucessMsg}}
+</div>
+
+<div class="alert alert-danger" ng-show="facebook.errorMsg">
+	<strong>Error! </strong>{{facebook.errorMsg}}
+</div>
+
+<div class="alert alert-success" ng-show="facebook.sucessMsg">
+	<strong>Success! </strong>{{facebook.sucessMsg}}
 </div>

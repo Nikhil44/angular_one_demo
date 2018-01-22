@@ -17,7 +17,11 @@ angular.module('authServices', [])
           return false;
         }
       };
-
+  
+        authFactory.socialMedia = function (token) {
+          AuthToken.setToken(token); // Set token retrieved from passportJS
+        };
+        
       authFactory.getUser = function(){
         if(AuthToken.getToken())
         {

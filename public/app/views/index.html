@@ -32,7 +32,7 @@
         <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
             <li><a ng-show="main.isloggedIn" href="/about">About</a></li>
-            <li><a ng-show="main.isloggedIn" href="#" ng-click="main.logout()">logout</a></li>
+            <li><a ng-show="main.isloggedIn" href="/profile">profile</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li ng-show="!main.isloggedIn">
@@ -42,10 +42,6 @@
           <li ng-show="!main.isloggedIn">
             <a href="/login">
               <span class="glyphicon glyphicon-log-in"></span> Login</a>
-          </li>
-          <li ng-show="main.isLoggedIn">
-            <a  href="/profile"></a>
-              <i class="fa fa-sign-out" aria-hidden="true"> Hello {{ main.username }}</i></a>
           </li>
           <li ng-show="main.isloggedIn">
             <a  href="#" ng-click="main.logout()">
