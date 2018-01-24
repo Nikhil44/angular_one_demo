@@ -1,10 +1,11 @@
 var FacebookStrategy = require('passport-facebook').Strategy; 
+var TwitterStrategy = require('passport-twitter').Strategy; 
+var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy; 
 
-var User = require('../models/user'); // Import User Model
-var session = require('express-session'); // Import Express Session Package
-var jwt = require('jsonwebtoken'); // Import JWT Package
-var secret = 'kapil'; // Create custom secret to use with JWT
-
+var User = require('../models/user'); 
+var session = require('express-session'); 
+var jwt = require('jsonwebtoken'); 
+var secret = 'kapil'; 
 var User = require('../models/user')
 
 
@@ -39,9 +40,9 @@ module.exports = function(app,passport) {
 
 
     passport.use(new FacebookStrategy({
-        clientID: '1951597031825830', // Replace with your Facebook Developer App client ID
-        clientSecret: '23a01fd593aaf516954822366264a9d1', // Replace with your Facebook Developer client secret
-        callbackURL: "http://localhost:8000/auth/facebook/callback", // Replace with your Facebook Developer App callback URL
+        clientID: '', 
+        clientSecret: '',
+        callbackURL: "http://localhost:8000/auth/facebook/callback",
         profileFields: ['id', 'displayName', 'photos', 'email']
     },
         function (accessToken, refreshToken, profile, done) {
@@ -62,6 +63,68 @@ module.exports = function(app,passport) {
     });
 
     app.get('/auth/facebook', passport.authenticate('facebook', { scope: 'email' }));
+
+
+
+
+    passport.use(new TwitterStrategy({
+        consumerKey: '', // Replace with your Twitter Developer App consumer key
+        consumerSecret: '', // Replace with your Twitter Developer App consumer secret
+        callbackURL: "", // Replace with your Twitter Developer App callback URL
+        userProfileURL: ""
+    },
+        function (token, tokenSecret, profile, done) {
+            if (profile.emails) {
+                User.findOne({ email: profile.emails[0].value }).select('username active password email').exec(function (err, user) {
+                    if (err) {
+                        done(err);
+                    } else {
+                        if (user && user !== null) {
+                            done(null, user);
+                        } else {
+                            done(err);
+                        }
+                    }
+                });
+            } else {
+                user = {}; // Since no user object exists, create a temporary one in order to return an error
+                user.id = 'null'; // Temporary id
+                user.active = true; // Temporary status
+                user.error = true; // Ensure error is known to exist
+                done(null, user); // Serialize and catch error
+            }
+        }
+    ));
+
+    app.get('/auth/twitter', passport.authenticate('twitter'));
+    app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/twittererror' }), function (req, res) {
+        res.redirect('/twitter/' + token); // Redirect user with newly assigned token
+    });
+
+
+    passport.use(new GoogleStrategy({
+        clientID: '', // Replace with your Google Developer App client ID
+        clientSecret: '', // Replace with your Google Developer App client ID
+        callbackURL: "" // Replace with your Google Developer App callback URL
+    },
+        function (accessToken, refreshToken, profile, done) {
+            User.findOne({ email: profile.emails[0].value }).select('username active password email').exec(function (err, user) {
+                if (err) done(err);
+
+                if (user && user !== null) {
+                    done(null, user);
+                } else {
+                    done(err);
+                }
+            });
+        }
+    ));
+
+    // Google Routes    
+    app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login', 'profile', 'email'] }));
+    app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/googleerror' }), function (req, res) {
+        res.redirect('/google/' + token); // Redirect user with newly assigned token
+    });
     
     return passport;
 }

@@ -6,8 +6,10 @@
 			  <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" ng-model = "main.loginData.username" />
 			  <input type="password" class="form-control" name="Password" placeholder="Password" required="" ng-model = "main.loginData.password" />
 			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
-			  <button ng-click ="main.facebook();" target="_blank" class="btn btn-lg btn-success btn-block">facebook </button>
-		</form>
+			  <button ng-click ="main.facebook();" target="_blank" class="btn btn-lg btn-success btn-block">Facebook </button>
+			  <button ng-click="main.twitter();" target="_blank" class="btn btn-lg btn-success btn-block">Twitter </button>
+			  <button ng-click="main.google();" target="_blank" class="btn btn-lg btn-success btn-block">Google </button>
+			</form>
 	</div>
 </div>
 
@@ -28,6 +30,21 @@
 	<strong>Error! </strong>{{facebook.errorMsg}}
 </div>
 
+<div class="alert alert-success" ng-show="twitter.sucessMsg">
+	<strong>Success! </strong>{{twitter.sucessMsg}}
+</div>
+
+<div class="alert alert-danger" ng-show="twitter.errorMsg">
+	<strong>Error! </strong>{{twitter.errorMsg}}
+</div>
+
 <div class="alert alert-success" ng-show="facebook.sucessMsg">
 	<strong>Success! </strong>{{facebook.sucessMsg}}
+</div>
+<div class="alert alert-danger" ng-show="google.errorMsg">
+	<strong>Error! </strong>{{google.errorMsg}}
+</div>
+
+<div class="alert alert-success" ng-show="google.sucessMsg">
+	<strong>Success! </strong>{{google.sucessMsg}}
 </div>
