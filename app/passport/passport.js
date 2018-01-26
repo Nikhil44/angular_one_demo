@@ -40,8 +40,8 @@ module.exports = function(app,passport) {
 
 
     passport.use(new FacebookStrategy({
-        clientID: '', 
-        clientSecret: '',
+        clientID: 'dccddddsa', 
+        clientSecret: 'asdasdas',
         callbackURL: "http://localhost:8000/auth/facebook/callback",
         profileFields: ['id', 'displayName', 'photos', 'email']
     },
@@ -68,9 +68,9 @@ module.exports = function(app,passport) {
 
 
     passport.use(new TwitterStrategy({
-        consumerKey: '', // Replace with your Twitter Developer App consumer key
-        consumerSecret: '', // Replace with your Twitter Developer App consumer secret
-        callbackURL: "", // Replace with your Twitter Developer App callback URL
+        consumerKey: 'asdsdas', // Replace with your Twitter Developer App consumer key
+        consumerSecret: 'asdsd', // Replace with your Twitter Developer App consumer secret
+        callbackURL: "asdasd", // Replace with your Twitter Developer App callback URL
         userProfileURL: ""
     },
         function (token, tokenSecret, profile, done) {
@@ -103,8 +103,8 @@ module.exports = function(app,passport) {
 
 
     passport.use(new GoogleStrategy({
-        clientID: '', // Replace with your Google Developer App client ID
-        clientSecret: '', // Replace with your Google Developer App client ID
+        clientID: 'fdgfdgdfg', // Replace with your Google Developer App client ID
+        clientSecret: 'dgfdgd', // Replace with your Google Developer App client ID
         callbackURL: "" // Replace with your Google Developer App callback URL
     },
         function (accessToken, refreshToken, profile, done) {
