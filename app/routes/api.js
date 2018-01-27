@@ -54,6 +54,39 @@ module.exports = function (router) {
       }
   });
  
+  router.post('/checkusername', function (req, res) {
+    User.findOne({ username: req.body.username }).select('username').exec(function (err, user) {
+      if (err) {
+        res.json({ success: false, message: 'Something went wrong. This error has been logged and will be addressed by our staff. We apologize for this inconvenience!' });
+      } else {
+        if (user) {
+          res.json({ success: false, message: 'That username is already taken' }); 
+                } else {
+          res.json({ success: true, message: 'Valid username' }); 
+        }
+      }
+    });
+  });
+
+  router.post('/checkemail', function (req, res) {
+    User.findOne({ email: req.body.email }).select('email').exec(function (err, user) {
+      if (err) {
+                res.json({ success: false, message: 'Something went wrong. This error has been logged and will be addressed by our staff. We apologize for this inconvenience!' });
+      } else {
+        if (user) {
+          res.json({ success: false, message: 'That e-mail is already taken' });
+        } else {
+          res.json({ success: true, message: 'Valid e-mail' }); 
+        }
+      }
+    });
+  });
+
+
+
+
+  
+
   router.post('/authenticate', function(req, res){
       User.findOne({ username: req.body.username },'email username password').exec(function(err,user){
         if(!user)
@@ -104,6 +137,12 @@ module.exports = function (router) {
       res.send({success:false, message: 'No token provided'});
     }
   });
+
+
+
+
+
+
 
   router.post('/me', function(req,res){
           res.send(req.decoded);
