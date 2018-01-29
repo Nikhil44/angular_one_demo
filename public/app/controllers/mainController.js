@@ -33,13 +33,12 @@ angular.module('mainController', ['authServices'])
 		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/facebook';
 	};
 
-	// Function to redirect users to twitter authentication page        
+  
 	this.twitter = function () {
 		app.disabled = true;
 		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/twitter';
 	};
 
-	// Function to redirect users to google authentication page
 	this.google = function () {
 		app.disabled = true;
 		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/google';
@@ -48,15 +47,17 @@ angular.module('mainController', ['authServices'])
 	
   this.doLogin = function(loginData) 
   {
+	  app.errorMsg = false;
+	  app.loading = true;
+	  app.expired = false; 
+	  app.disabled = true; 
+	  $scope.alert = 'default'; 
+
   			Auth.login(app.loginData).then(function (res) {
-          		app.errorMsg = false;
-          		app.loading = true;
-				console.log(res);
           		if(res.data.success)
           		{
 					app.loading = false;
-					app.sucessMsg = res.data.message + "...redicating";
-					  
+					app.sucessMsg = res.data.message + "...redicating";  
           			$timeout(function() {
 						  $location.path('/');
 						  app.loginData = '';
@@ -65,8 +66,19 @@ angular.module('mainController', ['authServices'])
           		}
           		else
           		{
-          			app.loading = false;
-          			app.errorMsg = res.data.message;
+					  if(data.data.expired)
+					  {
+						  app.loading = true;
+						  app.loading = false;
+						  app.errorMsg = res.data.message;
+					  }
+					  else
+					  {
+						  app.loading  = false;
+						  app.disabled = true;
+						  app.errorMsg = res.data.message;
+					  }
+          			
           		}
           });
   };

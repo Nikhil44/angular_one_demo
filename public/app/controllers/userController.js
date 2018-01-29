@@ -3,6 +3,7 @@ angular.module('userControllers', ['userServices'])
 .controller('regCtrl', function($http,$location,$timeout, User) {
 	var app = this;
     this.regUser = function(regData, valid) {
+	  app.disabled = true;	
 	  app.loading = true;
 	  app.errorMsg = false;
 	  if(valid)
@@ -19,11 +20,15 @@ angular.module('userControllers', ['userServices'])
 
 			  }
 			  else {
+				  app.disabled = false;
+				  $scope.alert = 'alert alert-danger'
 				  app.loading = false;
 				  app.errorMsg = res.data.message;
 			  }
 		  });
 	  } else {
+		app.disabled = false;
+		$scope.alert = 'alert alert-danger'
 		app.loading = false;
 		app.errorMsg = 'Please ensure form is filled our properly';
 	  }

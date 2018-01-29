@@ -14,27 +14,21 @@ module.exports = function(app,passport) {
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: true, cookie: { secure: false } }));
-
-    // Serialize users once logged in   
     passport.serializeUser(function (user, done) {
-        // Check if the user has an active account
         if (user.active) {
-            // Check if user's social media account has an error
             if (user.error) {
-                token = 'unconfirmed/error'; // Set url to different error page
+                token = 'unconfirmed/error'; 
             } else {
-                token = jwt.sign({ username: user.username, email: user.email }, secret, { expiresIn: '24h' }); // If account active, give user token
+                token = jwt.sign({ username: user.username, email: user.email }, secret, { expiresIn: '24h' }); 
             }
         } else {
-            token = 'inactive/error'; // If account not active, provide invalid token for use in redirecting later
+            token = 'inactive/error'; 
         }
-        done(null, user.id); // Return user object
+        done(null, user.id); 
     });
-
-    // Deserialize Users once logged out    
     passport.deserializeUser(function (id, done) {
         User.findById(id, function (err, user) {
-            done(err, user); // Complete deserializeUser and return done
+            done(err, user); 
         });
     });
 

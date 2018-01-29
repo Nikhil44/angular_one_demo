@@ -3,12 +3,12 @@
 		<form ng-submit="main.doLogin(loginData)" name="Login_Form" class="form-signin" >
 		    <h3 class="form-signin-heading">Welcome Back! Please Sign In</h3>
 			  <hr class="colorgraph"><br>
-			  <input type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" ng-model = "main.loginData.username" />
-			  <input type="password" class="form-control" name="Password" placeholder="Password" required="" ng-model = "main.loginData.password" />
-			  <button class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
-			  <button ng-click ="main.facebook();" target="_blank" class="btn btn-lg btn-success btn-block">Facebook </button>
-			  <button ng-click="main.twitter();" target="_blank" class="btn btn-lg btn-success btn-block">Twitter </button>
-			  <button ng-click="main.google();" target="_blank" class="btn btn-lg btn-success btn-block">Google </button>
+			  <input ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" type="text" class="form-control" name="Username" placeholder="Username" required="" autofocus="" ng-model = "main.loginData.username" />
+			  <input ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" type="password" class="form-control" name="Password" placeholder="Password" required="" ng-model = "main.loginData.password" />
+			  <button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" class="btn btn-lg btn-primary btn-block"  name="Submit" value="Login" type="Submit">Login</button>
+			  <button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" ng-click ="main.facebook();" target="_blank" class="btn btn-lg btn-success btn-block">Facebook </button>
+			  <button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" ng-click="main.twitter();" target="_blank" class="btn btn-lg btn-success btn-block">Twitter </button>
+			  <button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" ng-click="main.google();" target="_blank" class="btn btn-lg btn-success btn-block">Google </button>
 			</form>
 	</div>
 </div>
@@ -18,33 +18,9 @@
 		<p> ......loading</p>
 </div>
 
-<div class="alert alert-danger" ng-show="main.errorMsg">
-		<strong>Error! </strong>{{main.errorMsg}}
-</div>
-
-<div class="alert alert-success" ng-show="main.sucessMsg">
-		<strong>Success! </strong>{{main.sucessMsg}}
-</div>
-
-<div class="alert alert-danger" ng-show="facebook.errorMsg">
-	<strong>Error! </strong>{{facebook.errorMsg}}
-</div>
-
-<div class="alert alert-success" ng-show="twitter.sucessMsg">
-	<strong>Success! </strong>{{twitter.sucessMsg}}
-</div>
-
-<div class="alert alert-danger" ng-show="twitter.errorMsg">
-	<strong>Error! </strong>{{twitter.errorMsg}}
-</div>
-
-<div class="alert alert-success" ng-show="facebook.sucessMsg">
-	<strong>Success! </strong>{{facebook.sucessMsg}}
-</div>
-<div class="alert alert-danger" ng-show="google.errorMsg">
-	<strong>Error! </strong>{{google.errorMsg}}
-</div>
-
-<div class="alert alert-success" ng-show="google.sucessMsg">
-	<strong>Success! </strong>{{google.sucessMsg}}
+<div class="row show-hide-message" ng-show="main.successMsg || main.errorMsg || facebook.errorMsg || twitter.errorMsg || google.errorMsg">
+	 <div ng-class="alert">{{ main.successMsg || main.errorMsg || facebook.errorMsg || twitter.errorMsg || google.errorMsg }}</div>&nbsp
+		<a ng-show="main.expired || facebook.expired || google.expired || twitter.expired" href="/resend">
+				<button type="button" class="btn btn-success">Resend Activation Link</button>
+			</a>	
 </div>

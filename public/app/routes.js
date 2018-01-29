@@ -85,6 +85,18 @@ var app = angular.module('appRoutes', ['ngRoute'])
             controllerAs: 'twitter',
             authenticated: false
         })
+        .when('/activate/:token', {
+            templateUrl: 'app/views/pages/users/activation/activate.html',
+            controller: 'emailCtrl',
+            controllerAs: 'email',
+            authenticated: false
+        })
+        .when('/resend', {
+            templateUrl: 'app/views/pages/users/activation/resend.html',
+            controller: 'resendCtrl',
+            controllerAs: 'resend',
+            authenticated: false
+        })
 
         .otherwise({ redirectTo: '/' }); 
         $locationProvider.html5Mode({ enabled: true, requireBase: false }); 
