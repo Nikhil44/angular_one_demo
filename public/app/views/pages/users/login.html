@@ -10,6 +10,17 @@
 			  <button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" ng-click="main.twitter();" target="_blank" class="btn btn-lg btn-success btn-block">Twitter </button>
 			  <button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" ng-click="main.google();" target="_blank" class="btn btn-lg btn-success btn-block">Google </button>
 			</form>
+
+<div>
+	<a href="/resetpassword">
+		<button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" type="button" class="btn btn-danger">Forgot Password</button>
+	</a>
+	<a href="/resetusername">
+		<button ng-disabled="main.disabled || facebook.disabled || twitter.disabled || google.disabled" type="button" class="btn btn-info">Forgot Username</button>
+	</a>
+</div>
+
+			
 	</div>
 </div>
 
@@ -17,6 +28,7 @@
 	<span class="glyphicon glyphicon-repeat fast-right-spinner"></span>
 		<p> ......loading</p>
 </div>
+
 
 <div class="row show-hide-message" ng-show="main.successMsg || main.errorMsg || facebook.errorMsg || twitter.errorMsg || google.errorMsg">
 	 <div ng-class="alert">{{ main.successMsg || main.errorMsg || facebook.errorMsg || twitter.errorMsg || google.errorMsg }}</div>&nbsp

@@ -1,5 +1,5 @@
 angular.module('mainController', ['authServices'])
-.controller('mainCtrl', function($location,$timeout, Auth, $rootScope) 
+.controller('mainCtrl', function($location,$timeout, Auth, $rootScope, $scope) 
 {
 	var app = this;
 	app.loadme = false;

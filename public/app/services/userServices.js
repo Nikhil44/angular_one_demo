@@ -19,6 +19,25 @@ angular.module('userServices', [])
   userFactory.resendLink = function (username) {
     return $http.put('/api/resend', username);
   };
+  userFactory.sendUsername = function (userData) {
+    return $http.get('/api/resetusername/' + userData);
+  };
+
+  userFactory.sendPassword = function (resetData) {
+    return $http.put('/api/resetpassword', resetData);
+  };
+
+  userFactory.resetUser = function (token) {
+    return $http.get('/api/resetpassword/' + token);
+  };
+
+  userFactory.savePassword = function (regData) {
+    return $http.put('/api/savepassword', regData);
+  };
+
+  userFactory.renewSession = function (username) {
+    return $http.get('/api/renewToken/' + username);
+  };
 
   return userFactory;
 });

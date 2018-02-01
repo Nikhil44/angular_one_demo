@@ -273,37 +273,205 @@ module.exports = function (router) {
       }
     });
   });
-  router.use(function(req,res,next){
-    var token = req.body.token || req.body.query || req.headers['x-access-token'];
-    if(token){
-      jwt.verify(token,'secret', function(err, decoded){
-        if (err) 
-        {
-          res.join({success: false, message: 'Token invalid'});
+
+  router.get('/resetusername/:email', function (req, res) {
+    User.findOne({ email: req.params.email }).select('email name username').exec(function (err, user) {
+      if (err) {
+        res.json({ success: false, message: err }); 
+      } else {
+        if (!user) {
+          res.json({ success: false, message: 'E-mail was not found' }); 
+        } else {
+
+          var email = {
+            from: 'kapil, kail@kapil.com',
+            to: user.email,
+            subject: 'Localhost Username Request',
+            text: 'Hello ' + user.name + ', You recently requested your username. Please save it in your files: ' + user.username,
+            html: 'Hello<strong> ' + user.name + '</strong>,<br><br>You recently requested your username. Please save it in your files: ' + user.username
+          };
+
+          
+          client.sendMail(email, function (err, info) {
+            if (err) {
+              console.log(err); 
+            } else {
+              console.log(info); 
+            }
+          });
+          res.json({ success: true, message: 'Username has been sent to e-mail! ' }); 
         }
-        else
-        {
+      }
+    });
+  });
+
+  router.put('/resetpassword', function (req, res) {
+    User.findOne({ username: req.body.username }).select('username active email resettoken name').exec(function (err, user) {
+      if (err) {
+      
+        var email = {
+          from: 'angular one demo, kapil@hapil.com',
+          to: 'kapil@gmail.com',
+          subject: 'Error Logged',
+          text: 'The following error has been reported in the MEAN Stack Application: ' + err,
+          html: 'The following error has been reported in the MEAN Stack Application:<br><br>' + err
+        };
+     
+        client.sendMail(email, function (err, info) {
+          if (err) {
+            console.log(err); 
+          } else {
+            console.log(info);
+            console.log(user.email); 
+          }
+        });
+        res.json({ success: false, message: 'Something went wrong. This error has been logged and will be addressed by our staff. We apologize for this inconvenience!' });
+      } else {
+        if (!user) {
+          res.json({ success: false, message: 'Username was not found' }); 
+        } else if (!user.active) {
+          res.json({ success: false, message: 'Account has not yet been activated' }); 
+        } else {
+          user.resettoken = jwt.sign({ username: user.username, email: user.email }, secret, { expiresIn: '24h' });
+          user.save(function (err) {
+            if (err) {
+              res.json({ success: false, message: err });
+            } else {
+              var email = {
+                from: 'angulrone demo, kapil@lkapil.com',
+                to: user.email,
+                subject: 'Reset Password Request',
+                text: 'Hello ' + user.name + ', You recently request a password reset link. Please click on the link below to reset your password:<br><br><a href="http://localhost:8000/reset/' + user.resettoken,
+                html: 'Hello<strong> ' + user.name + '</strong>,<br><br>You recently request a password reset link. Please click on the link below to reset your password:<br><br><a href="http://localhost:8000/reset/' + user.resettoken + '">http://localhost:8000/reset/</a>'
+              };
+              
+              client.sendMail(email, function (err, info) {
+                if (err) {
+                  console.log(err); 
+                } else {
+                  console.log(info); 
+                  console.log('sent to: ' + user.email);
+                }
+              });
+              res.json({ success: true, message: 'Please check your e-mail for password reset link' }); 
+            }
+          });
+        }
+      }
+    });
+  });
+
+  router.get('/resetpassword/:token', function (req, res) {
+    User.findOne({ resettoken: req.params.token }).select().exec(function (err, user) {
+      if (err) {
+
+        var email = {
+          from: 'angular one demo app, kapil@gapil.com',
+          to: 'kapil@gmail.com',
+          subject: 'Error Logged',
+          text: 'The following error has been reported in the MEAN Stack Application: ' + err,
+          html: 'The following error has been reported in the MEAN Stack Application:<br><br>' + err
+        };
+     
+        client.sendMail(email, function (err, info) {
+          if (err) {
+            console.log(err); 
+          } else {
+            console.log(info); 
+            console.log(user.email); 
+          }
+        });
+        res.json({ success: false, message: 'Something went wrong. This error has been logged and will be addressed by our staff. We apologize for this inconvenience!' });
+      } else {
+        var token = req.params.token; 
+        jwt.verify(token, secret, function (err, decoded) {
+          if (err) {
+            res.json({ success: false, message: 'Password link has expired' });
+          } else {
+            if (!user) {
+              res.json({ success: false, message: 'Password link has expired' }); 
+            } else {
+              res.json({ success: true, user: user }); 
+            }
+          }
+        });
+      }
+    });
+  });
+  router.put('/savepassword', function (req, res) {
+    User.findOne({ username: req.body.username }).select('username email name password resettoken').exec(function (err, user) {
+      if (err) {
+        
+        var email = {
+          from: 'kapil, kapil@kapil.com',
+          to: 'kapil@gmail.com',
+          subject: 'Error Logged',
+          text: 'The following error has been reported in the MEAN Stack Application: ' + err,
+          html: 'The following error has been reported in the MEAN Stack Application:<br><br>' + err
+        };
+        
+        client.sendMail(email, function (err, info) {
+          if (err) {
+            console.log(err); 
+          } else {
+            console.log(info); 
+            console.log(user.email); 
+          }
+        });
+        res.json({ success: false, message: 'Something went wrong. This error has been logged and will be addressed by our staff. We apologize for this inconvenience!' });
+      } else {
+        if (req.body.password === null || req.body.password === '') {
+          res.json({ success: false, message: 'Password not provided' });
+        } else {
+          user.password = req.body.password; 
+          user.resettoken = false;  
+          user.save(function (err) {
+            if (err) {
+              res.json({ success: false, message: err });
+            } else {
+              
+              var email = {
+                from: 'angular one, kapil@kapil.com',
+                to: user.email,
+                subject: 'Password Recently Reset',
+                text: 'Hello ' + user.name + ', This e-mail is to notify you that your password was recently reset at localhost.com',
+                html: 'Hello<strong> ' + user.name + '</strong>,<br><br>This e-mail is to notify you that your password was recently reset at localhost.com'
+              };
+              
+              client.sendMail(email, function (err, info) {
+                if (err) console.log(err); 
+              });
+              res.json({ success: true, message: 'Password has been reset!' }); 
+            }
+          });
+        }
+      }
+    });
+  });    
+  
+
+  router.use(function (req, res, next) {
+    var token = req.body.token || req.body.query || req.headers['x-access-token'];
+    if (token) {
+      jwt.verify(token, 'secret', function (err, decoded) {
+        if (err) {
+          res.join({ success: false, message: 'Token invalid' });
+        }
+        else {
           req.decoded = decoded;
           next();
         }
       });
     }
-    else{
-      res.send({success:false, message: 'No token provided'});
+    else {
+      res.send({ success: false, message: 'No token provided' });
     }
   });
-
-
-
-
-
-
 
   router.post('/me', function(req,res){
           res.send(req.decoded);
   });
 
   
-
   return router;
 }
