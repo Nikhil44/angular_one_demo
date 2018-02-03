@@ -128,6 +128,7 @@ module.exports = function (router) {
                 } else {
                   var token = jwt.sign({ username: user.username, email: user.email }, secret, { expiresIn: '24h' }); // Logged in: Give user token
                   res.json({ success: true, message: 'User authenticated!', token: token }); // Return token in JSON object to controller
+                  console.log(token);
                 }
                  
           }
@@ -138,7 +139,8 @@ module.exports = function (router) {
         }
       });
   });
-    router.put('/activate/:token', function (req, res) {
+
+  router.put('/activate/:token', function (req, res) {
     User.findOne({ temporarytoken: req.params.token }, function (err, user) {
       if (err) {
         var email = {
@@ -229,8 +231,6 @@ module.exports = function (router) {
       }
     });
   });
-
-
 
   router.put('/resend', function (req, res) {
     User.findOne({ username: req.body.username }).select('username name email temporarytoken').exec(function (err, user) {
@@ -398,6 +398,7 @@ module.exports = function (router) {
       }
     });
   });
+
   router.put('/savepassword', function (req, res) {
     User.findOne({ username: req.body.username }).select('username email name password resettoken').exec(function (err, user) {
       if (err) {
@@ -447,15 +448,16 @@ module.exports = function (router) {
         }
       }
     });
-  });    
+  });   
   
-
   router.use(function (req, res, next) {
     var token = req.body.token || req.body.query || req.headers['x-access-token'];
+    console.log(token);
     if (token) {
-      jwt.verify(token, 'secret', function (err, decoded) {
+      jwt.verify(token, secret, function (err, decoded) {
         if (err) {
-          res.join({ success: false, message: 'Token invalid' });
+          console.log(err);
+          res.json({ success: false, message: 'Token invalid' });
         }
         else {
           req.decoded = decoded;
@@ -467,6 +469,41 @@ module.exports = function (router) {
       res.send({ success: false, message: 'No token provided' });
     }
   });
+
+  router.get('/renewToken/:username', function (req, res) {
+    User.findOne({ username: req.params.username }).select('username email').exec(function (err, user) {
+      if (err) {
+        // Create an e-mail object that contains the error. Set to automatically send it to myself for troubleshooting.
+        var email = {
+          from: 'MEAN Stack Staff, cruiserweights@zoho.com',
+          to: 'gugui3z24@gmail.com',
+          subject: 'Error Logged',
+          text: 'The following error has been reported in the MEAN Stack Application: ' + err,
+          html: 'The following error has been reported in the MEAN Stack Application:<br><br>' + err
+        };
+        // Function to send e-mail to myself
+        client.sendMail(email, function (err, info) {
+          if (err) {
+            console.log(err); // If error with sending e-mail, log to console/terminal
+          } else {
+            console.log(info); // Log success message to console if sent
+            console.log(user.email); // Display e-mail that it was sent to
+          }
+        });
+        res.json({ success: false, message: 'Something went wrong. This error has been logged and will be addressed by our staff. We apologize for this inconvenience!' });
+      } else {
+        // Check if username was found in database
+        if (!user) {
+          res.json({ success: false, message: 'No user was found' }); // Return error
+        } else {
+          var newToken = jwt.sign({ username: user.username, email: user.email }, secret, { expiresIn: '24h' }); // Give user a new token
+          res.json({ success: true, token: newToken }); // Return newToken in JSON object to controller
+        }
+      }
+    });
+  });
+
+
 
   router.post('/me', function(req,res){
           res.send(req.decoded);
