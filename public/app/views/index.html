@@ -17,10 +17,12 @@
     <script src="assets/js/angular-animate.js"></script>
     <script src="app/services/userServices.js"></script>
     <script src="app/controllers/emailController.js"></script>
+    <script src="app/controllers/managementController.js"></script>
     <script src="app/controllers/userController.js"></script>
     <script src="app/controllers/mainController.js"></script>
     <script src="app/services/authServices.js"></script>
-   
+
+
     <script src="app/app.js"></script>
     <script src="app/routes.js"></script>
   </head>
@@ -33,19 +35,19 @@
         </div>
         <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
-            <li><a ng-show="main.isloggedIn" href="/about">About</a></li>
-            <li><a ng-show="main.isloggedIn" href="/profile">profile</a></li>
+            <li><a ng-show="main.isLoggedIn" href="/about">About</a></li>
+            <li><a ng-show="main.isLoggedIn" href="/profile">profile</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li ng-show="!main.isloggedIn">
+          <li ng-show="!main.isLoggedIn">
             <a href="/register">
               <span class="glyphicon glyphicon-user"></span> Sign Up</a>
           </li>
-          <li ng-show="!main.isloggedIn">
+          <li ng-show="!main.isLoggedIn">
             <a href="/login">
               <span class="glyphicon glyphicon-log-in"></span> Login</a>
           </li>
-          <li ng-show="main.isloggedIn">
+          <li ng-show="main.isLoggedIn">
             <a  href="#" ng-click="main.logout()">
               <i class="fa fa-sign-out" aria-hidden="true"> Logout</i>
             </a>
@@ -60,10 +62,10 @@
         </div>
     </div>
 
-    
+
     <div class="modal fade" id="myModal" role="dialog">
       <div class="modal-dialog">
-    
+
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
@@ -82,7 +84,7 @@
             <button type="button" ng-hide="main.hideButton" ng-click="main.endSession();" class="btn btn-danger" data-dismiss="modal">No</button>
           </div>
         </div>
-    
+
       </div>
     </div>
 

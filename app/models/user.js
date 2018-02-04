@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
-var titlize = require('mongoose-title-case'); // Import Mongoose Title Case Plugin
-var validate = require('mongoose-validator'); // Import Mongoose Validator Plugin
+var titlize = require('mongoose-title-case'); 
+var validate = require('mongoose-validator'); 
 
-// User E-mail Validator
 var emailValidator = [
   validate({
     validator: 'matches',
@@ -18,7 +17,6 @@ var emailValidator = [
   })
 ];
 
-// Username Validator
 var usernameValidator = [
   validate({
     validator: 'isLength',
@@ -45,16 +43,16 @@ var passwordValidator = [
   })
 ];
 
-// User Mongoose Schema
 var UserSchema = new Schema({
-  firstname: {type: String, required: true },
-  lastname:  {type: String, required: true },
+  
+  name:  {type: String, required: true },
   username: { type: String, lowercase: true, required: true, unique: true, validate: usernameValidator },
   password: { type: String, required: true, validate: passwordValidator, select: false },
   email: { type: String, required: true, lowercase: true, unique: true, validate: emailValidator },
   active: { type: Boolean, required: true, default: false },
   temporarytoken: { type: String, required: true },
-  resettoken: { type: String, required: false }
+  resettoken: { type: String, required: false },
+  permission: { type: String, required: true, default: 'moderator' }
 });
 
 UserSchema.pre('save', function(next) {
@@ -73,7 +71,7 @@ UserSchema.methods.comparePassword = function (password) {
 };
 
 UserSchema.plugin(titlize, {
-  paths: ['firstname','lastname']
+  paths: ['name']
 });
 
 module.exports = mongoose.model('User', UserSchema);

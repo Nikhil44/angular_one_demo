@@ -1,16 +1,11 @@
 var FacebookStrategy = require('passport-facebook').Strategy; 
 var TwitterStrategy = require('passport-twitter').Strategy; 
 var GoogleStrategy = require('passport-google-oauth').OAuth2Strategy; 
-
 var User = require('../models/user'); 
 var session = require('express-session'); 
 var jwt = require('jsonwebtoken'); 
 var secret = 'kapil'; 
-var User = require('../models/user')
-
-
 module.exports = function(app,passport) {
-
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(session({ secret: 'keyboard cat', resave: false, saveUninitialized: true, cookie: { secure: false } }));
@@ -92,7 +87,7 @@ module.exports = function(app,passport) {
 
     app.get('/auth/twitter', passport.authenticate('twitter'));
     app.get('/auth/twitter/callback', passport.authenticate('twitter', { failureRedirect: '/twittererror' }), function (req, res) {
-        res.redirect('/twitter/' + token); // Redirect user with newly assigned token
+        res.redirect('/twitter/' + token)
     });
 
 
@@ -117,7 +112,7 @@ module.exports = function(app,passport) {
     // Google Routes    
     app.get('/auth/google', passport.authenticate('google', { scope: ['https://www.googleapis.com/auth/plus.login', 'profile', 'email'] }));
     app.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/googleerror' }), function (req, res) {
-        res.redirect('/google/' + token); // Redirect user with newly assigned token
+        res.redirect('/google/' + token); 
     });
     
     return passport;
