@@ -1,0 +1,17 @@
+{
+  "name": "angular_one_demo",
+  "homepage": "https://github.com/nikhilbang44/angular_one_demo",
+  "authors": [
+    "nikhil bang"
+  ],
+  "description": "test",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
